@@ -1,0 +1,39 @@
+//colours
+//common
+$brand-lightgrey: lighten(#000,95%);
+$brand-darkgrey: lighten(#000,20%);
+
+//brand
+$brand-primary: black;
+$brand-secondary:pink;
+$brand-muted: lighten($brand-primary,10%);
+$brand-placeholder-color:$brand-lightgrey;
+
+//underscores styles
+$brand-font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$brand-heading: "Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif;
+$brand-code: Menlo, Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+
+$fluid-base: (
+    min-vw: 490px,
+    max-vw: 3000px,
+    min-fs: 14px,
+    max-fs: 20px,
+    line-height: 1.4
+);
+
+$code: (
+    min-vw: 490px,
+    max-vw: 3000px,
+    min-fs: 12px,
+    max-fs: 18px,
+    line-height: 1.4
+);
+
+$small: (
+    min-vw: 490px,
+    max-vw: 3000px,
+    min-fs: 10px,
+    max-fs: 16px,
+    line-height: 1.3
+);

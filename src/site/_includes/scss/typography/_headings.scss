@@ -1,0 +1,16 @@
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    margin: 0 0 .8em 0;
+}
+
+$h1: (
+    min-vw: 490px,
+    max-vw: 1600px,
+    min-fs: 36px,
+    max-fs: 80px,
+    line-height: 1.1
+);
+
+h1 {
+    @include fluid($h1);
+}

@@ -1,0 +1,88 @@
+$columns: (
+	1: 100%,
+	2: 50%,
+	3: 33.33%,
+	4: 25%,
+	5: 20%,
+	6: 16.66%,
+	7: 14.28%,
+	8: 12.5%,
+	9: 11.11%
+);
+
+$columns__margin: 3.8%;
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+%gallery-styles {
+    margin: 20px;
+
+    @include media("<=tablet") {
+        margin: 20px 0;
+    }
+}
+
+.gallery-caption {
+	display: block;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+
+    @include media("<=tablet") {
+        display: block;
+        max-width: 100% !important;
+    }
+
+    img {
+        width: 100%;
+
+        @include media("<=tablet") {
+            max-width: 100%;
+        }
+    }
+
+	.gallery-columns-2 & {
+		max-width: calc(50% - 40px);
+        @extend %gallery-styles;
+	}
+
+	.gallery-columns-3 & {
+		max-width: calc(33.33% - 40px);
+        @extend %gallery-styles;
+	}
+
+	.gallery-columns-4 & {
+		max-width: calc(25% - 40px);
+        @extend %gallery-styles;
+	}
+
+	.gallery-columns-5 & {
+		max-width: calc(20% - 40px);
+        @extend %gallery-styles;
+	}
+
+	.gallery-columns-6 & {
+		max-width: calc(16.66% - 40px);
+        @extend %gallery-styles;
+	}
+
+	.gallery-columns-7 & {
+		max-width: calc(14.28% - 40px);
+        @extend %gallery-styles;
+	}
+
+	.gallery-columns-8 & {
+		max-width: calc(12.5% - 40px);
+        @extend %gallery-styles;
+	}
+
+	.gallery-columns-9 & {
+		max-width: calc(11.11% - 40px);
+        @extend %gallery-styles;
+	}
+}

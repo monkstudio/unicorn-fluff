@@ -1,0 +1,66 @@
+/* .site-menu {
+    display: none;
+} */
+
+.site-menu {
+    .active {
+        display: block;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    a {
+        display: block;
+        padding: .5em;
+    }
+
+    .no-js & {
+        display: block;
+    }
+    @include media("<=tablet") {
+        display: none;
+    }
+    &.active {
+        display: block;
+    }
+}
+
+.menu-button {
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+    line-height: 1;
+    position: absolute;
+    right: .3em;
+    top: .2em;
+
+    display: none;
+    @include media("<=tablet") {
+        display: block;
+    }
+}
+// ======================================================================================
+
+// Mobile menu types (Remove or comment out what you don’t need)
+// TO USE:
+// 1. Add the name as a class to the menu wrapper in header.php
+//    eg. <div class="menu-wrapper slideup">
+// 2. Make sure the corresponding sass file is being imported
+// 3. Change styles
+// Sidenote: Everything inside the menu wrapper will be contained within the mobile menu
+
+// ======================================================================================
+
+//@import "menus/overlay";
+//@import "menus/slidedown";
+@import "menus/slideleft";
+//@import "menus/slideright";
+//@import "menus/dropdown";
+//@import "menus/pushleft"; //no need to add .push to .menu-wrapper -- make sure to js/menus/push.js is enqueued
+//@import "menus/pushright";  //no need to add .push to .menu-wrapper -- make sure to js/menus/push.js is enqueued
+//@import "menus/pushtop";  //no need to add .push to .menu-wrapper -- make sure to js/menus/push.js is enqueued

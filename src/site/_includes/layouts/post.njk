@@ -1,0 +1,12 @@
+---
+bodyClass: single-post
+---
+{% extends 'layouts/base.njk' %}
+{% block content %}
+  {{ content | safe }}
+
+  <hr>
+
+  Posted on {{ page.date | dateDisplay('LLL d, yyyy - HH:mm') }} by {{ site.author.name }}
+  
+{% endblock %}

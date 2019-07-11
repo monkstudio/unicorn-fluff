@@ -1,0 +1,21 @@
+a {
+	color: $brand-primary;
+    text-decoration: none;
+
+	&:visited {
+		color: $brand-primary;
+	}
+	&:hover,
+	&:active {
+		color: $brand-secondary;
+        text-decoration: none;
+	}
+	&:focus {
+		outline: 2px dotted $brand-primary;
+        text-decoration: none;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}

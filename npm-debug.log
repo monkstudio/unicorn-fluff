@@ -1,0 +1,48 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/Users/monk/.npm-packages/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'sass:process',
+1 verbose cli   '--watch' ]
+2 info using npm@4.0.2
+3 info using node@v11.6.0
+4 verbose run-script [ 'presass:process', 'sass:process', 'postsass:process' ]
+5 info lifecycle Monk@3.0.0~presass:process: Monk@3.0.0
+6 silly lifecycle Monk@3.0.0~presass:process: no script for presass:process, continuing
+7 info lifecycle Monk@3.0.0~sass:process: Monk@3.0.0
+8 verbose lifecycle Monk@3.0.0~sass:process: unsafe-perm in lifecycle true
+9 verbose lifecycle Monk@3.0.0~sass:process: PATH: /Users/monk/.npm-packages/lib/node_modules/npm/bin/node-gyp-bin:/devserver/base-static/unicornfluff/node_modules/.bin:/Users/monk/.npm-packages/lib/node_modules/npm/bin/node-gyp-bin:/devserver/base-static/unicornfluff/node_modules/.bin:/devserver/_server/bin:/Applications/MAMP/bin/php/php7.2.7/bin:/Users/monk/.npm-packages/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Server.app/Contents/ServerRoot/usr/bin:/Applications/Server.app/Contents/ServerRoot/usr/sbin:/usr/X11/bin:~/.composer/vendor/bin
+10 verbose lifecycle Monk@3.0.0~sass:process: CWD: /devserver/base-static/unicornfluff
+11 silly lifecycle Monk@3.0.0~sass:process: Args: [ '-c',
+11 silly lifecycle   'node-sass --watch src/site/_includes/scss/ -o src/site/css --output-style compressed' ]
+12 info lifecycle Monk@3.0.0~sass:process: Failed to exec sass:process script
+13 verbose stack Error: Monk@3.0.0 sass:process: `node-sass --watch src/site/_includes/scss/ -o src/site/css --output-style compressed`
+13 verbose stack spawn ENOENT
+13 verbose stack     at ChildProcess.<anonymous> (/Users/monk/.npm-packages/lib/node_modules/npm/lib/utils/spawn.js:33:16)
+13 verbose stack     at ChildProcess.emit (events.js:188:13)
+13 verbose stack     at maybeClose (internal/child_process.js:978:16)
+13 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:265:5)
+14 verbose pkgid Monk@3.0.0
+15 verbose cwd /devserver/base-static/unicornfluff
+16 error Darwin 17.7.0
+17 error argv "/usr/local/bin/node" "/Users/monk/.npm-packages/bin/npm" "run" "sass:process" "--watch"
+18 error node v11.6.0
+19 error npm  v4.0.2
+20 error file sh
+21 error code ELIFECYCLE
+22 error errno ENOENT
+23 error syscall spawn
+24 error Monk@3.0.0 sass:process: `node-sass --watch src/site/_includes/scss/ -o src/site/css --output-style compressed`
+24 error spawn ENOENT
+25 error Failed at the Monk@3.0.0 sass:process script 'node-sass --watch src/site/_includes/scss/ -o src/site/css --output-style compressed'.
+25 error Make sure you have the latest version of node.js and npm installed.
+25 error If you do, this is most likely a problem with the Monk package,
+25 error not with npm itself.
+25 error Tell the author that this fails on your system:
+25 error     node-sass --watch src/site/_includes/scss/ -o src/site/css --output-style compressed
+25 error You can get information on how to open an issue for this project with:
+25 error     npm bugs Monk
+25 error Or if that isn't available, you can get their info via:
+25 error     npm owner ls Monk
+25 error There is likely additional logging output above.
+26 verbose exit [ 1, true ]

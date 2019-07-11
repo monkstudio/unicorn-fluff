@@ -1,0 +1,37 @@
+{
+  "name": "Monk",
+  "version": "3.0.0",
+  "description": "A project bootstrap for Eleventy sites. With pipelines for PostCSS, JavaScript, and serverless functions",
+  "author": "Phil Hawksworth",
+  "license": "MIT",
+  "scripts": {
+    "sass:process": "node-sass --watch src/site/_includes/scss/ -o src/site/css --output-style compressed",
+    "serve": "cross-env ELEVENTY_ENV=dev eleventy --serve",
+    "build": "cross-env ELEVENTY_ENV=prod eleventy",
+    "seed": "cross-env ELEVENTY_ENV=seed eleventy",
+    "path": "NODE_PATH=../../node_modules/",
+    "start": "concurrently 'npm run sass:process --watch' 'npm run serve'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/philhawksworth/eleventyone"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^0.8.3",
+    "@11ty/eleventy-plugin-rss": "^1.0.6",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.3",
+    "autoprefixer": "^9.6.0",
+    "axios": "^0.19.0",
+    "concurrently": "^4.1.0",
+    "dotenv": "^8.0.0",
+    "html-minifier": "^4.0.0",
+    "luxon": "^1.16.0",
+    "node-sass": "^4.12.0",
+    "sass": "^1.22.0",
+    "uglify-js": "^3.6.0",
+    "xml2js": "^0.4.19"
+  },
+  "devDependencies": {
+    "cross-env": "5.2.0"
+  }
+}
