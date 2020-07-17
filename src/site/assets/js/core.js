@@ -1,3 +1,10 @@
+console.log('🥑 %cMade by Monk', 'background: #616a2e; color: #f4e9e2; padding: 5px 17px; border-radius: 3px;');
+console.log(' %chttp://monk.com.au ', 'padding: 5px 13px;');
+
+//js detect
+(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);
+
+
 // simple button click event handler
 function btnHandler(selector, callback) {
   var btn = document.querySelector(selector);
@@ -8,8 +15,6 @@ function btnHandler(selector, callback) {
   }, false);
 }
 
-//js detect
-(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);
 
 //nav
 (function(document, window, undefined) {

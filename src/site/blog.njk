@@ -1,0 +1,36 @@
+---
+title: Blog
+menuorder: 5
+tags:
+  - nav
+pagination:
+  data: collections.post
+  size: 3
+  alias: posts
+---
+
+{{ collections.post | serializePosts }}
+
+
+{% extends 'layouts/base.njk' %}
+
+{% block content %}
+  {%- for post in pagination.items -%}
+    <article class="post">
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+    </article>
+  {%- endfor -%}
+
+  <!-- Pagination -->
+  {% if pagination.pageLinks.length > 1 %}
+  <nav class="pagination">
+    {% if pagination.previousPageLink %}
+    <a class="newer-posts btn" href="{{ pagination.previousPageHref | url }}">Newer Articles</a>
+    {% endif %}
+
+    {% if pagination.nextPageLink %}
+    <a class="older-posts btn" href="{{ pagination.nextPageHref | url }}">Older Articles</a>
+    {% endif %}
+  </nav>
+  {% endif %}
+{% endblock %}

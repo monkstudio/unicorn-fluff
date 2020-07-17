@@ -1,6 +1,6 @@
 {
-    "layout": "layouts/page.njk",
-    "tags" : "page",
-    "slug" : "{{ title | slug }}",
-    "permalink": "/{{ title | slug }}/index.html"
+    "layout": "layouts/post.njk",
+    "tags" : "events",
+    "mySlug" : "events",
+    "permalink": "/events/{{ title | slug }}/index.html"
   }

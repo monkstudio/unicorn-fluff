@@ -22,8 +22,8 @@
     </div>
 
     {% set js %}
-      {% include "js/core.js" %}
-      {% include "js/hello.js" %}
+      {% include "../../assets/js/core.js" %}
+      {% include "../../assets/js/hello.js" %}
     {% endset %}
     <script>{{ js | jsmin | safe }}</script>
 
