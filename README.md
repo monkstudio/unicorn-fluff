@@ -1,2 +1,2 @@
 # unicorn-fluff
- Static site generator with Netlify CMS
+ Static site boilerplate using eleventy and Netlify CMS
