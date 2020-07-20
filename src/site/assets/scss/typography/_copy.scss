@@ -21,7 +21,6 @@ address {
 pre {
     background: $brand-lightgrey;
     font-family: $brand-code;
-    @include fluid($code);
     margin-bottom: 1.6em;
     max-width: 100%;
     overflow: auto;
@@ -33,7 +32,6 @@ kbd,
 tt,
 var {
     font-family: $brand-code;
-    @include fluid($code);
 }
 
 abbr,

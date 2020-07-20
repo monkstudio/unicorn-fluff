@@ -15,31 +15,31 @@ input[type="datetime-local"],
 input[type="color"],
 textarea {
 	color: $brand-primary;
-    appearance: none;
-    border: none;
+	appearance: none;
+	border: none;
 	border: 1px solid $brand-primary;
 	border-radius: 0;
 	padding: 5px;
 	margin: .3em 0;
-    background-color: transparent;
+	background-color: transparent;
 
 	&:focus {
 		color: $brand-primary;
-//        padding: 10px;
-//        outline: none;
-//        border-width: 2px;
-//        background-color: $brand-lightgrey;
+		//        padding: 10px;
+		//        outline: none;
+		//        border-width: 2px;
+		//        background-color: $brand-lightgrey;
 	}
 }
 
 input[type="radio"] {
-    display: inline-block;
+	display: inline-block;
 }
 
 select {
-//    appearance: none;
-    @extend input;
-    border-radius: 0;
+	//    appearance: none;
+	@extend input;
+	border-radius: 0;
 	border: 1px solid $brand-primary;
 }
 
@@ -49,8 +49,7 @@ textarea {
 }
 
 label {
-    @include fluid($small);
-    margin: 1em 0;
-    display: block;
-    font-weight: bold;
+	margin: 1em 0;
+	display: block;
+	font-weight: bold;
 }

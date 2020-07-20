@@ -5,16 +5,13 @@ menuorder: 1
 tags:
   - nav
 permalink: /
----
-## This site is a starting point
+templateEngineOverride: njk,md
 
-```html
-<li>
-    <a href="{{ page.url }}">{{ page.data.title }}</a> -
-    <time datetime="{{ page.date }}">{{ page.date | dateDisplay("LLLL d, y") }}</time>
-  </li>
-  ```
-From this point we should already have:
+---
+{% container %}
+  {% column %}
+
+  From this point we should already have:
 
 - [Eleventy](https://11ty.io) with a skeleton site
 - A date format filter for Nunjucks based on [Luxon](https://moment.github.io/luxon)
@@ -24,9 +21,12 @@ From this point we should already have:
 - [Netlify Dev](https://www.netlify.com/products/dev) for testing [Netlify redirects](https://netlify.com/docs/redirects/)
 - Serverless (FaaS) development pipeline with [Netlify Dev](https://www.netlify.com/products/dev) and [Netlify Functions](https://www.netlify.com/products/functions)
 
+  {% button "a test button", "/contact", "blank" %}
 
 
-## Post pages
+ <a href="{{ url }}">{{ title }}</a> -
+  <time datetime="{{ page.date }}">{{ page.date | dateDisplay("LLLL d, y") }}</time>
+  ## Post pages
 
 The pages found in in the posts
 
@@ -51,6 +51,9 @@ These links were sourced from [hawksworx.com](https://www.hawksworx.com/feed.jso
 {%- endfor -%}
 </ul>
 
+  {% endcolumn %}
+
+  {% column %}
 
 ## Prerequisite
 
@@ -91,6 +94,14 @@ Netlify's Redirects API can provide friendlier URLs as proxies to these URLs.
 
 - [/api/hello](/api/hello)
 - [/api/fetch-joke](/api/fetch-joke)
+
+
+
+  {% endcolumn %}
+{% endcontainer %}
+
+
+
 
 
 

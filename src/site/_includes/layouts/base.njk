@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      {% include "meta.njk" %}
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
     <title>{{ title }}</title>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
@@ -13,6 +13,10 @@
       {% include "header.njk" %}
 
       <main id="main-content">
+        {% if  page.url !== '/' %} 
+        <h1>{{ title }}</h1>
+        {%- if subtitle %}<p class="subtitle">{{ subtitle | safe }}</p>{% endif %}
+        {% endif %}
         {% block content %}
         {{content | safe}}
         {% endblock %}

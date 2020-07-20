@@ -3,7 +3,17 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const { DateTime } = require("luxon");
 
+const componentsDir = `./src/site/_includes/components`;
+const button = require(`${ componentsDir }/button.js`);
+const container = require(`${ componentsDir }/container.js`);
+const column = require(`${ componentsDir }/column.js`);
+
+
 module.exports = function(config) {
+  // components
+  config.addShortcode('button', button);
+  config.addPairedShortcode('container', container);
+  config.addPairedShortcode('column', column);
 
   // A useful way to reference the context we are runing eleventy in
   let env = process.env.ELEVENTY_ENV;
@@ -19,6 +29,9 @@ module.exports = function(config) {
   // Date formatting (human readable)
   config.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj).toFormat("dd LLL yyyy");
+  });
+  config.addFilter("readableDateYear", dateObj => {
+    return DateTime.fromJSDate(dateObj).toFormat("yyyy");
   });
 
   // Date formatting (machine readable)
@@ -52,9 +65,9 @@ module.exports = function(config) {
 
 
   // pass some assets right through
-  config.addPassthroughCopy("./src/site/images");
+  config.addPassthroughCopy("./src/site/assets/images");
   config.addPassthroughCopy("./src/site/admin");
-  config.addPassthroughCopy("./src/site/css");
+  config.addPassthroughCopy("./src/site/assets/css");
 
   // make the seed target act like prod
   env = (env=="seed") ? "prod" : env;
