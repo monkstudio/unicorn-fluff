@@ -1,0 +1,18 @@
+.site-header {
+    background-color: $brand-secondary;
+    color: #FFF;
+    .inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.logo {
+    position: relative;
+    z-index: 101;
+    width: 220px;
+    @include media("<=tablet") {
+        width: 160px;
+    }
+}

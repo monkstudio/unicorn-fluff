@@ -1,0 +1,18 @@
+table {
+	margin:1em 0;
+	width: 100%;
+	text-align: left;
+	th {
+		font-weight: 600;
+		// @include font-size(1.4);
+		padding-bottom: 20px;
+	}
+	td {
+		padding: 10px;
+		&:first-child {
+			font-weight: 600;
+			color: $brand-secondary;
+			width: 100px;
+		}
+	}
+}

@@ -1,31 +1,36 @@
-
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const yaml = require('js-yaml');
+const htmlmin = require('html-minifier');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const { DateTime } = require("luxon");
 
-const componentsDir = `./src/site/_includes/components`;
+const componentsDir = `./src/_includes/components`;
 const button = require(`${ componentsDir }/button.js`);
 const container = require(`${ componentsDir }/container.js`);
 const column = require(`${ componentsDir }/column.js`);
 
+module.exports = (config) => {
 
-module.exports = function(config) {
   // components
   config.addShortcode('button', button);
   config.addPairedShortcode('container', container);
   config.addPairedShortcode('column', column);
 
-  // A useful way to reference the context we are runing eleventy in
-  let env = process.env.ELEVENTY_ENV;
+  // Needed to prevent eleventy from ignoring changes to `webpack.njk`
+  // since it is in our `.gitignore`
+  config.setUseGitIgnore(false);
 
-  // Layout aliases can make templates more portable
-  config.addLayoutAlias('default', 'layouts/base.njk');
+  // Allow eleventy to understand yaml files
+  // mostly because we want comments support in data file.
+  config.addDataExtension('yml', (contents) => yaml.safeLoad(contents));
 
-  // Add some utility filters
-  config.addFilter("squash", require("./src/utils/filters/squash.js") );
-  config.addFilter("dateDisplay", require("./src/utils/filters/date.js") );
-  //to use to dump collection data eg. {{ collections.post | serializePosts}}
-  config.addFilter('serializePosts', require("./src/utils/filters/serializeposts.js"));
+  // Pass-through files
+  config.addPassthroughCopy('src/robots.txt');
+  config.addPassthroughCopy('src/favicon.ico');
+  config.addPassthroughCopy('src/assets/images');
+  config.addPassthroughCopy('src/assets/scripts/vendor');
+  config.addPassthroughCopy('src/assets/static');
+
+  config.addFilter("dateDisplay", require("./src/filters/date.js") );
   // Date formatting (human readable)
   config.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj).toFormat("dd LLL yyyy");
@@ -38,19 +43,27 @@ module.exports = function(config) {
   config.addFilter("machineDate", dateObj => {
     return DateTime.fromJSDate(dateObj).toFormat("yyyy-MM-dd");
   });
-  // add support for syntax highlighting
-  config.addPlugin(syntaxHighlight);
+
+  config.addFilter("filterTags", tags => {
+    tags = tags.filter(function(item) {
+      switch(item) {
+        // filter out any unwanted tags here
+        case "all":
+        case "nav":
+        case "post":
+        case "posts":
+        case "page":
+        case "pages":
+          return false;
+      }
+
+      return true;
+    });
+    return tags;
+  });
+
   // add support for rss
   config.addPlugin(pluginRss);
-
-  //custom sort nav by menu order
-  config.addCollection("myCustomSort", function(collection) {
-    return collection.getFilteredByTag("nav").sort(function(a, b) {
-      return a.data.menuorder - b.data.menuorder;
-    });
-  });
-  // minify the html output
-  config.addTransform("htmlmin", require("./src/utils/minify-html.js"));
 
   // compress and combine js files
   config.addFilter("jsmin", function(code) {
@@ -63,23 +76,58 @@ module.exports = function(config) {
       return minified.code;
   });
 
+  //make tag list
+  config.addCollection("tagList", function(collection) {
+    let tagSet = new Set();
+    collection.getAll().forEach(function(item) {
+      if( "tags" in item.data ) {
+        let tags = item.data.tags;
 
-  // pass some assets right through
-  config.addPassthroughCopy("./src/site/assets/images");
-  config.addPassthroughCopy("./src/site/admin");
-  config.addPassthroughCopy("./src/site/assets/css");
+        tags = tags.filter(function(item) {
+          switch(item) {
+            // this list should match the `filter` list in tags.njk
+            case "all":
+            case "nav":
+            case "post":
+            case "posts":
+            case "page":
+            case "pages":
+              return false;
+          }
 
-  // make the seed target act like prod
-  env = (env=="seed") ? "prod" : env;
+          return true;
+        });
+
+        for (const tag of tags) {
+          tagSet.add(tag);
+        }
+      }
+    });
+
+    // returning an array in addCollection works in Eleventy 0.5.3
+    return [...tagSet];
+  });
+
+
+  // Minify eleventy pages in production
+  if (process.env.NODE_ENV === 'production') {
+    config.addTransform('html-min', (content, outputPath) =>
+      outputPath.endsWith('.html')
+        ? htmlmin.minify(content, {
+            collapseWhitespace: true,
+            removeComments: true,
+            removeRedundantAttributes: true,
+            removeScriptTypeAttributes: true,
+            removeStyleLinkTypeAttributes: true,
+            useShortDoctype: true
+          })
+        : content
+    );
+  }
+
   return {
-    dir: {
-      input: "src/site",
-      output: "dist",
-      data: `_data/${env}`
-    },
-    templateFormats : ["njk", "md", "11ty.js"],
-    htmlTemplateEngine : "njk",
-    markdownTemplateEngine : "njk",
-    passthroughFileCopy: true
+    dir: { input: 'src', output: 'dist' },
+    htmlTemplateEngine: 'njk'
   };
+
 };

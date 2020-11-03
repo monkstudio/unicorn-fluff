@@ -1,0 +1,18 @@
+<nav class="main-navigation">
+  <div class="menu-wrapper slideleft">
+    <div class="overlay-content">
+      <ul id="primary-menu">
+        {%- for current in collections.page -%}
+        <li data-label="{{  current.fileSlug }}" {% if  current.url == page.url %} data-current="current item" class="current-menu-item" {% endif %}>
+          <a href="{{ current.url }}">{{  current.data.title }}</a>
+          <ul class="sub-menu">
+            <li data-label="{{  current.fileSlug }}" {% if  current.url == page.url %} data-current="current item" class="current-menu-item" {% endif %}>
+              <a href="{{ current.url }}">{{  current.data.title }}</a>
+            </li>
+          </ul>
+        </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  </div>
+</nav>

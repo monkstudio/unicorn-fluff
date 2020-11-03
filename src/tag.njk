@@ -1,0 +1,22 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  addAllPagesToCollections: true
+layout: default.njk
+permalink: /tag/{{ tag }}/
+---
+<div class="container">
+  <h1>Tagged “{{ tag }}”</h1>
+
+  {% set postslist = collections[ tag ] %}
+  <ul class="tag list">
+  {%- for post in postslist |  sort(attribute='date') -%}
+    <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
+    {% include 'partials/excerpt.njk' %}
+    </li>
+  {% endfor %}
+  </ul>
+</div>
+

@@ -1,0 +1,174 @@
+#primary-menu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    font-weight: 700;
+    color: $brand-primary;
+    text-transform: uppercase;
+
+    .no-js & {
+        display: flex;
+    }
+    @include media("<=menu") {
+        display: none;
+    }
+
+	ul {
+        list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
+		list-style: none;
+		margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+	li {
+		list-style: none;
+		position: relative;
+        text-align:center;
+        display: inline-flex;
+        justify-content: center;
+        font-weight: 600;
+        letter-spacing: .04em;
+        position: relative;
+        margin: 0;
+        @include font-size(1.4);
+        @include media("<=laptop") {
+            @include font-size(1.2);
+        }
+        &:hover,
+        &:focus-within {
+            > .sub-menu {
+                opacity: 1;
+                transition: .3s ease opacity;
+                visibility: visible;
+            }
+            > a {
+                background-color: lighten($brand-secondary,10%);
+            }
+        }
+        &.current-menu-item a {
+            background-color: lighten($brand-secondary,10%);
+        }
+	}
+
+
+	a {
+		display: block;
+		text-decoration: none;
+        border: none;
+        padding:20px 1em;
+        width: 100%;
+        @include media("<=menu") {
+            @include font-size(2);
+        }
+        &:hover {
+            color: #FFF;
+        }
+    }
+
+    .active & {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding:100px 20px;
+    }
+
+    .sub-menu {
+        z-index: 80;
+        position: absolute;
+        width: 200px;
+        top: 100%;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s ease opacity;
+        li {
+            width: 100%;
+            margin:0;
+            padding: 0;
+        }
+        a {
+            background-color: $muted;
+            color: $brand-darkgrey;
+            &:hover {
+                background-color: $brand-lightgrey;
+                color: $brand-primary;
+            }
+        }
+    }
+}
+
+
+
+#social-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    li {
+        margin: 0 .5em;
+
+        svg {
+            width: 20px;
+            fill: currentColor;
+            transition: .3s ease all;
+        }
+        &:hover {
+            svg {
+                fill: $brand-secondary;
+                transition: .3s ease all;
+            }
+        }
+    }
+}
+
+//Mobile menu global styles
+// ==================================================
+
+
+//media query to hide/show the mobile menu
+
+.menu-button {
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+    line-height: 1;
+    margin: 0;
+    padding: 10px;
+    display: none;
+    margin-left: auto;
+    z-index: 101;
+    position: relative;
+    @include font-size(1.4);
+    @include media("<=menu") {
+        display: flex;
+    }
+}
+// ======================================================================================
+
+// Mobile menu types (Remove or comment out what you don’t need)
+// TO USE:
+// 1. Add the name as a class to the menu wrapper in header.php
+//    eg. <div class="menu-wrapper slideup">
+// 2. Make sure the corresponding sass file is being imported
+// 3. Change styles
+// Sidenote: Everything inside the menu wrapper will be contained within the mobile menu
+
+// ======================================================================================
+
+// @import "menus/overlay";
+//@import "menus/slidedown";
+@import "menus/slideleft";
+//@import "menus/slideright";
+//@import "menus/dropdown";
+//@import "menus/pushleft";
+//@import "menus/pushright";
+//@import "menus/pushtop";

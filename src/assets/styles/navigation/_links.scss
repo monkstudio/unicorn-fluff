@@ -1,0 +1,19 @@
+a {
+	color: currentColor;
+	text-decoration: none;
+	transition: .3s ease all;
+
+	&:visited {
+		color: currentColor;
+	}
+	&:hover,
+	&:active {
+		color: $brand-secondary;
+		text-decoration: none;
+		transition: .3s ease all;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}

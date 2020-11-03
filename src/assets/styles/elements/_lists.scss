@@ -1,0 +1,54 @@
+// Unordered and Ordered lists
+ul,
+ol {
+    margin-top: 0;
+    margin: 1.5em .5em;
+    clear: both;
+    ul,
+    ol {
+        margin-bottom: 0;
+    }
+    li {
+        margin-bottom: 1em;
+    }
+}
+
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal;
+}
+
+li > ul,
+li > ol {
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+dl {
+    display: flex;
+}
+dt {
+    font-weight: bold;
+    flex: 1;
+}
+
+dd {
+    margin: 0 1em 1em;
+    flex: 1;
+}
+.quote {
+    display: block;
+    @include font-size(16);
+    line-height: 1;
+    margin-bottom: -.7em;
+    @include media("<=desktop") {
+        @include font-size(12);
+        // margin-bottom: -.9em;
+    }
+    @include media("<=tablet") {
+        @include font-size(9);
+    }
+}

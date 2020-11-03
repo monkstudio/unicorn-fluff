@@ -1,0 +1,11 @@
+lang: en-GB
+name: Monk Media
+title: Monk Media
+author:
+  name: Jaclyn Tan
+  email: jaclyn@monk.com.au
+# see https://ogp.me/#types
+type: website
+url: https://monkmedia.com.au
+image: https://avatars3.githubusercontent.com/u/447956?s=400&v=4
+description: Just another static site

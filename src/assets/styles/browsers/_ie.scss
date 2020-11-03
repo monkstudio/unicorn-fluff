@@ -1,0 +1,79 @@
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+
+  @media all and (-ms-high-contrast: none),
+  (-ms-high-contrast: active) {
+    ul {
+      list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
+
+      li {
+        list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
+      }
+    }
+
+    .main-navigation li {
+      list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
+    }
+
+
+    picture.object-fit-polyfill {
+
+      @include media("<=laptop") {
+        min-height: initial;
+
+        img {
+          position: relative !important;
+          margin: 0 !important;
+          top: 0 !important;
+					left: initial !important;
+        }
+
+
+        .feature & {
+          img {
+            position: initial !important;
+            margin: initial !important;
+						top: initial !important;
+						left: initial !important;
+          }
+        }
+      }
+
+    }
+
+
+    picture {
+      margin: 20px 0;
+
+      &.object-fit-polyfill {
+        min-height: 350px;
+
+        img {
+          height: 100%;
+        }
+      }
+
+      @include media("<=laptop") {
+        width: 100%;
+        display: block;
+        margin: auto
+      }
+		}
+
+		.chart {
+			@include media("<=tablet") {
+				height: 450px;
+				min-width: 300px;
+				width: 100%
+			}
+		}
+  }
+
+  @supports (-ms-accelerator:true) {
+    /* IE Edge 12+ CSS styles go here */
+  }
+}
+
+@supports (-ms-accelerator:true) {
+  /* IE Edge 12+ CSS styles go here */
+}

@@ -1,9 +1,0 @@
-<nav id="menu" class="site-menu" role="navigation">
-  <ul id="primary-menu">
-    {%- for nav in collections.myCustomSort -%}
-      <li>
-        <a href="{{ nav.url | url }}" {% if nav.url == page.url %} data-current="current item" class="current-menu-item" {% endif %}>{{ nav.data.title }}</a>
-      </li>
-    {%- endfor -%}
-  </ul>
-</nav>

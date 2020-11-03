@@ -1,0 +1,11 @@
+# https://github.com/browserslist/browserslist#readme
+# based on https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/package.json
+
+[production]
+>1%
+IE 10
+
+# Faster build time in development
+[development]
+>1%
+IE 11

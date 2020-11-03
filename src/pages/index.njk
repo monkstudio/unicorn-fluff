@@ -1,0 +1,52 @@
+---
+title: Home
+templateEngineOverride: njk,md
+permalink: /
+date: Last Modified
+---
+<section id="sections-wrapper">
+  <section id="overview" class="page-section">
+  {% include "partials/overview.njk" %}
+  </section>
+</section>
+
+{# Caveat: indenting does not work normally with shortcodes so keep all content on same indent line.  #}
+{% container %}
+  {% column %}
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  {% button "a test button", "/contact" %}
+  <a href="{{ url }}">{{ title }}</a> -
+  <time datetime="{{ page.date }}">{{ page.date  | dateDisplay("LLLL d, y, HH:mm") }}</time>
+  {% endcolumn %}
+
+  {% column %}
+  ## Page list
+  <ul class="listing">
+  {%- for page in collections.page |  sort(attribute='date') -%}
+    <li>
+      <a href="{{ page.url }}">{{ page.data.title }}</a> -
+      <time datetime="{{ page.date }}">{{ page.date | dateDisplay("LLLL d, y") }}</time>
+    </li>
+  {%- endfor -%}
+  </ul>
+
+  ## Posts list
+  <ul class="listing">
+  {%- for page in collections.post |  sort(attribute='date') -%}
+    <li>
+      <a href="{{ page.url }}">{{ page.data.title }}</a> -
+      <time datetime="{{ page.date }}">{{ page.date | dateDisplay("LLLL d, y") }}</time>
+    </li>
+  {%- endfor -%}
+  </ul>
+
+  {% endcolumn %}
+{% endcontainer %}
+
+
+
+
+
+
+
+

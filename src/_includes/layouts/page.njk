@@ -1,0 +1,16 @@
+---
+eleventyComputed:
+  htmlClass: no-js
+  bodyClass: single-page page-{{page.fileSlug}}
+layout: default.njk
+---
+{% block content %}
+  <div class="container">
+    {% if  page.url !== '/' %}
+      {% include 'partials/page-title.njk' %}
+    {% endif %}
+  </div>
+
+  {{ content | safe }}
+
+{% endblock %}

@@ -1,0 +1,49 @@
+.container {
+  max-width: $grid-width;
+  margin: 0 auto;
+  padding: 0 $grid-padding;
+  width: 100%;
+
+  @include media("<=desktop") {
+    padding: 0 50px;
+  }
+
+  @include media("<=tablet") {
+    padding: 0 20px;
+  }
+
+  &.compact {
+    max-width: 800px;
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(400px, 1fr) );
+  grid-gap: $grid-gutter;
+  &.align-top {
+    align-items: flex-start;
+  }
+  &.align-center {
+    align-items: center;
+  }
+  &.align-bottom {
+    align-items: flex-end;
+  }
+}
+
+
+.page-section {
+  padding: $grid-padding 0;
+}
+
+.tag-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  .btn {
+    margin: 0 1em 1em 0;
+  }
+}
