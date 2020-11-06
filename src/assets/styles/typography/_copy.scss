@@ -19,12 +19,12 @@ address {
 }
 
 pre {
-    background: $brand-lightgrey;
+    background: $muted;
     font-family: $brand-code;
-    margin-bottom: 1.6em;
     max-width: 100%;
     overflow: auto;
-    padding: 1.6em;
+    padding: 1em;
+    @include font-size(1.4);
 }
 
 code,
@@ -42,11 +42,22 @@ acronym {
 
 mark,
 ins {
-    background: $brand-lightgrey;
-    text-decoration: none;
-    padding: 0 .2em;
+    background: #2b3c44;
+    box-shadow: inset 5px 0 0 #fe8019;
+    z-index: 0;
+    pointer-events: none;
+    line-height: inherit;
+    white-space: pre;
+    width: 100%;
 }
 
+code {
+    background-color: $muted;
+    @include font-size(1.4);
+    pre & {
+        background-color: transparent;
+    }
+}
 big {
     font-size: 125%;
 }

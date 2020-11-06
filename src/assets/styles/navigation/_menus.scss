@@ -49,7 +49,7 @@
                 background-color: lighten($brand-secondary,10%);
             }
         }
-        &.current-menu-item a {
+        &.current-menu-item > a {
             background-color: lighten($brand-secondary,10%);
         }
 	}
@@ -91,6 +91,7 @@
             width: 100%;
             margin:0;
             padding: 0;
+            text-align: left;
         }
         a {
             background-color: $muted;
@@ -172,3 +173,21 @@
 //@import "menus/pushleft";
 //@import "menus/pushright";
 //@import "menus/pushtop";
+
+
+// no js overrides
+.no-js {
+    .overlay-content {
+        visibility: visible;
+        opacity: 1;
+    }
+    .menu-wrapper {
+        position: relative;
+        width: auto;
+        height: auto;
+        z-index: 101;
+    }
+    .inner {
+        flex-wrap: wrap;
+    }
+}

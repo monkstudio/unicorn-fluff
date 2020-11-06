@@ -11,7 +11,7 @@
 		background-color:$brand-secondary;
 		overflow: hidden;
 
-		.toggled & {
+		.active & {
 			background-color:$brand-secondary;
 			transition:.5s linear max-height;
 			z-index: 101;

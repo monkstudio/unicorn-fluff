@@ -1,21 +1,27 @@
-.js {
+// .js {
   .animate {
     opacity: 0;
-    transition: .6s ease opacity,.6s ease transform;
-    transition-delay: .3s;
+    transition: .6s ease all;
+    // transition-delay: .3s;
     position: relative;
+    visibility: hidden;
+
     &.animate-down {
       transform: translate(0, -20px);
     }
+
     &.animate-up {
       transform: translate(0, 20px);
     }
+
     &.animate-left {
       transform: translate(-20px, 0);
     }
+
     &.animate-right {
       transform: translate(20px, 0);
     }
+
     &.animate-wipe {
       &:before {
         content: "";
@@ -29,18 +35,20 @@
     }
 
     &.fadein {
-        opacity: 1;
-        transition: .6s ease opacity,.6s ease transform;
-        transition-delay: .3s;
-        transform: translate(0, 0);
+      visibility: visible;
+      opacity: 1;
+      transition: .6s ease opacity, .6s all;
+      transition-delay: .3s;
+      transform: translate(0, 0);
 
-        &.animate-wipe {
-          transition: none;
-          &:before {
-            animation-delay: 1s ease all;
-            animation: wipe 2s forwards;
-          }
+      &.animate-wipe {
+        transition: none;
+
+        &:before {
+          animation-delay: 1s ease all;
+          animation: wipe 2s forwards;
         }
+      }
     }
   }
-}
+// }

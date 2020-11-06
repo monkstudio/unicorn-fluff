@@ -7,7 +7,7 @@ Modals
 ━━━ ⋅𖥔⋅ ━━✶━━ ⋅𖥔⋅ ━━━
  -ˋˏ *.·:·.⟐.·:·.* ˎˊ-
 */
-var focusableElems = document.querySelectorAll('#page a[href]:not([disabled]),#page button:not([disabled]),#page textarea:not([disabled]),#page input[type="text"]:not([disabled]),#page input[type="radio"]:not([disabled]),#page input[type="checkbox"]:not([disabled]),#page select:not([disabled])');
+var focusableElems = document.querySelectorAll('#page a[href]:not([disabled]):not(.anchor-link),#page button:not([disabled]),#page textarea:not([disabled]),#page input[type="text"]:not([disabled]),#page input[type="radio"]:not([disabled]),#page input[type="checkbox"]:not([disabled]),#page select:not([disabled])');
 
 export function closeModal() {
   document.getElementsByTagName('html')[0].classList.remove('modal-open');

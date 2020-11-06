@@ -30,7 +30,7 @@
             transition-delay: .2s;
         }
 
-		.toggled & {
+		.active & {
 			background-color:$brand-secondary;
 			transition:.5s linear all;
 			z-index: 100;

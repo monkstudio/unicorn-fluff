@@ -1,4 +1,4 @@
-<%= htmlWebpackPlugin.files.css.map((css) => `<link href="${css}" rel="stylesheet">`).join('') %>
+<%= htmlWebpackPlugin.files.css.map((css) => `<link type="text/css" rel="stylesheet" href="${css}" rel="stylesheet">`).join('') %>
 <!--[if IE]>-->
 <!-- IE related scripts here -->
 <!--<![endif]-->

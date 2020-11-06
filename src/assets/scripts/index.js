@@ -1,5 +1,6 @@
 'use strict';
 import  {openModal,closeModal} from "./modals";
+import inView from '../../../node_modules/in-view';
 // import  {parallax} from "./parallax";
 // import  {elementPartiallyInViewport, elementInViewport, getPreviousSibling} from "./utilities";
 // parallax();
@@ -9,6 +10,23 @@ var root;
 root = document.getElementsByTagName('html')[0];
 
 
+/*
+-ˋˏ *.·:·.⟐.·:·.* ˎˊ-
+━━━ ⋅𖥔⋅ ━━✶━━ ⋅𖥔⋅ ━━━
+Inview
+━━━ ⋅𖥔⋅ ━━✶━━ ⋅𖥔⋅ ━━━
+ -ˋˏ *.·:·.⟐.·:·.* ˎˊ-
+*/
+inView('.animate')
+    .on('enter',  el => {
+      setTimeout(function(){       
+        el.classList.add('fadein')
+    }, 500);
+
+    })
+    .on('exit', el => {
+        // el.style.opacity = 0.5;
+    });
 
 /*
 -ˋˏ *.·:·.⟐.·:·.* ˎˊ-
@@ -30,7 +48,7 @@ for (var i = 0; i < modalTriggers.length; i++) {
 }
 
 var hash = window.location.hash;
-if (hash) {
+if (hash.includes('modal')) {
   openModal(hash)
 }
 

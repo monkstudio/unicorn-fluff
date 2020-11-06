@@ -43,7 +43,7 @@
             padding: 50px 0;
         }
 
-        .toggled & {
+        .active & {
             background-color:rgba($brand-darkgrey, .98);
             transition:.5s linear all;
             z-index: 100;
@@ -77,11 +77,6 @@
 	transition:.5s ease all;
 	min-height: 100vh;
 }
-//.push {
-//    transform:translate($menu-width,0);
-//	transition:.5s ease all;
-//	position: fixed;
-//}
 .site-content:before {
     content: "";
     position: absolute;

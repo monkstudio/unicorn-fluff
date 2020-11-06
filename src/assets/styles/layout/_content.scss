@@ -37,6 +37,10 @@
   padding: $grid-padding 0;
 }
 
+.feature {
+  width: 100vw;
+  display: block;
+}
 .tag-list {
   list-style: none;
   display: flex;
@@ -45,5 +49,27 @@
   padding: 0;
   .btn {
     margin: 0 1em 1em 0;
+    @include font-size(1.2);
   }
+}
+
+/*
+-ˋˏ *.·:·.⟐.·:·.* ˎˊ-
+━━━ ⋅𖥔⋅ ━━✶━━ ⋅𖥔⋅ ━━━
+Posts
+━━━ ⋅𖥔⋅ ━━✶━━ ⋅𖥔⋅ ━━━
+ -ˋˏ *.·:·.⟐.·:·.* ˎˊ-
+*/
+aside.toc-wrapper {
+  background-color: $muted;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 80ch;
+  margin: 50px 0;
+}
+
+article {
+  max-width: 80ch;
+  margin: auto;
+  padding: 50px 0;
 }

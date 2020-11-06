@@ -6,32 +6,42 @@ layout: default.njk
 ---
 
 {% block content %}
+
+  {%- if thumbnail.url %}
+    {% image thumbnail.url , thumbnail.alt, thumbnail.classes %}
+  {% endif %}
+
   <div class="container">
-    {%- if thumbnail %}
-    <img src="/{{ thumbnail }}" alt="" class="feature-image" />
-    {% endif %}
+    <article>
+      <div class="entry-header">
+        {% include 'partials/page-title.njk' %}
 
-    <div class="entry-header">
-      {% include 'partials/page-title.njk' %}
+        {%- if tags | filterTags %}
+          <ul class="tag-list">
+            {% for tag in tags | filterTags %}
+              {% set tagUrl %}/tag/{{ tag }}/{% endset %}
+              <li>
+              <a href="{{ tagUrl | url }}" class="post-tag btn">{{ tag }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
 
-      {%- if tags | filterTags %}
-        <ul class="tag-list">
-          {% for tag in tags | filterTags %}
-            {% set tagUrl %}/tag/{{ tag }}/{% endset %}
-            <li>
-            <a href="{{ tagUrl | url }}" class="post-tag btn">{{ tag }}</a>
-            </li>
-          {% endfor %}
-        </ul>
+      {%- if showTOC === true %}
+      <aside class="toc-wrapper">
+        <h2>Contents</h2>
+        {{ content | toc | safe }}
+      </aside>
       {% endif %}
-    </div>
 
-    <div class="entry-content">
-      {{ content | safe }}
-    </div>
+      <div class="entry-content">
+        {{ content | safe }}
+      </div>
 
-    <div class="entry-footer">
-      Posted on  <time datetime="{{ page.date }}">{{ page.date | dateDisplay("LLLL d, y") }}</time> by <span class="author">{{ site.author.name }}</span>
+      <div class="entry-footer">
+        Posted on  <time datetime="{{ page.date }}">{{ page.date | dateDisplay("LLLL d, y") }}</time> by <span class="author">{{ site.author.name }}</span>
+      </div>
     </div>
-  </div>
+  </article>
 {% endblock %}
