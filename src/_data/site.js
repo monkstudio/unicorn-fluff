@@ -12,6 +12,6 @@ module.exports = {
   url: 'https://monkmedia.com.au',
   image: 'https://avatars3.githubusercontent.com/u/447956?s=400&v=4',
   description: 'Just another static site',
-  baseUrl: 'https://unicorn-fluff.netlify.app',
+  baseUrl: 'https://raw.githubusercontent.com/monkstudio/unicorn-fluff/master/src',
   repo:'https://github.com/monkstudio/unicorn-fluff'
 };
