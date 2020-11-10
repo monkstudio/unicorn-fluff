@@ -181,7 +181,7 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.&lt;/p&gt;
   
   &lt;ul class=&quot;tag list&quot;&gt;&lt;li class=&quot;postlist-item&quot;&gt;
     &lt;a href=&quot;/admin/&quot;&gt;
-  &lt;img src=&quot;https://monkmedia.com.au&quot; class=&quot;thumb&quot; alt=&quot;&quot;&gt;
+  
   &lt;div class=&quot;overlay&quot;&gt;
     &lt;div class=&quot;item-title&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;item-brand&quot;&gt;&lt;/div&gt;
@@ -189,17 +189,18 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.&lt;/p&gt;
 &lt;/a&gt;
     &lt;/li&gt;
   &lt;li class=&quot;postlist-item&quot;&gt;
-    &lt;a href=&quot;/about/&quot;&gt;
-  &lt;img src=&quot;https://monkmedia.com.au[object Object]&quot; class=&quot;thumb&quot; alt=&quot;&quot;&gt;
-  &lt;div class=&quot;overlay&quot;&gt;
-    &lt;div class=&quot;item-title&quot;&gt;About&lt;/div&gt;
-    &lt;div class=&quot;item-brand&quot;&gt;&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;li class=&quot;postlist-item&quot;&gt;
     &lt;a href=&quot;/contact/&quot;&gt;
-  &lt;img src=&quot;https://monkmedia.com.au[object Object]&quot; class=&quot;thumb&quot; alt=&quot;&quot;&gt;
+    &lt;div class=&quot;image-wrapper animate&quot;&gt;&lt;picture&gt; &lt;source type=&quot;image/webp&quot; srcset=&quot; /assets/images/optimised/28b464f5-320.webp 320w, /assets/images/optimised/28b464f5-640.webp 640w, /assets/images/optimised/28b464f5-960.webp 960w, /assets/images/optimised/28b464f5-1200.webp 1200w, /assets/images/optimised/28b464f5-1800.webp 1800w, /assets/images/optimised/28b464f5.webp 1920w,&quot; &gt; &lt;img
+    loading=&quot;lazy&quot;
+    class=&quot;small&quot;
+    alt=&quot;Its Pusheen&quot;
+    src=&quot;/assets/images/optimised/28b464f5-320.jpeg&quot;
+    sizes=&#39;(min-width: 1024px) 1024px, 100vw&#39;
+    srcset=&quot; /assets/images/optimised/28b464f5-320.jpeg 320w, /assets/images/optimised/28b464f5-640.jpeg 640w, /assets/images/optimised/28b464f5-960.jpeg 960w, /assets/images/optimised/28b464f5-1200.jpeg 1200w, /assets/images/optimised/28b464f5-1800.jpeg 1800w, /assets/images/optimised/28b464f5.jpeg 1920w,&quot;
+    width=&quot;320&quot;
+    height=&quot;180&quot;&gt; &lt;/picture&gt;&lt;/div&gt;
+  
+  
   &lt;div class=&quot;overlay&quot;&gt;
     &lt;div class=&quot;item-title&quot;&gt;Contact&lt;/div&gt;
     &lt;div class=&quot;item-brand&quot;&gt;&lt;/div&gt;
@@ -208,7 +209,17 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.&lt;/p&gt;
     &lt;/li&gt;
   &lt;li class=&quot;postlist-item&quot;&gt;
     &lt;a href=&quot;/blog/a-post-page/&quot;&gt;
-  &lt;img src=&quot;https://monkmedia.com.au[object Object]&quot; class=&quot;thumb&quot; alt=&quot;&quot;&gt;
+    &lt;div class=&quot;image-wrapper animate&quot;&gt;&lt;picture&gt; &lt;source type=&quot;image/webp&quot; srcset=&quot; /assets/images/optimised/cefe4cde-320.webp 320w, /assets/images/optimised/cefe4cde-640.webp 640w, /assets/images/optimised/cefe4cde-960.webp 960w, /assets/images/optimised/cefe4cde-1200.webp 1200w, /assets/images/optimised/cefe4cde-1800.webp 1800w, /assets/images/optimised/cefe4cde.webp 1920w,&quot; &gt; &lt;img
+    loading=&quot;lazy&quot;
+    class=&quot;small&quot;
+    alt=&quot;Its Pusheen&quot;
+    src=&quot;/assets/images/optimised/cefe4cde-320.jpeg&quot;
+    sizes=&#39;(min-width: 1024px) 1024px, 100vw&#39;
+    srcset=&quot; /assets/images/optimised/cefe4cde-320.jpeg 320w, /assets/images/optimised/cefe4cde-640.jpeg 640w, /assets/images/optimised/cefe4cde-960.jpeg 960w, /assets/images/optimised/cefe4cde-1200.jpeg 1200w, /assets/images/optimised/cefe4cde-1800.jpeg 1800w, /assets/images/optimised/cefe4cde.jpeg 1920w,&quot;
+    width=&quot;320&quot;
+    height=&quot;180&quot;&gt; &lt;/picture&gt;&lt;/div&gt;
+  
+  
   &lt;div class=&quot;overlay&quot;&gt;
     &lt;div class=&quot;item-title&quot;&gt;A post page&lt;/div&gt;
     &lt;div class=&quot;item-brand&quot;&gt;&lt;/div&gt;
@@ -217,7 +228,17 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.&lt;/p&gt;
     &lt;/li&gt;
   &lt;li class=&quot;postlist-item&quot;&gt;
     &lt;a href=&quot;/blog/asdsadsa/&quot;&gt;
-  &lt;img src=&quot;https://monkmedia.com.au&quot; class=&quot;thumb&quot; alt=&quot;&quot;&gt;
+    &lt;div class=&quot;image-wrapper animate&quot;&gt;&lt;picture&gt; &lt;source type=&quot;image/webp&quot; srcset=&quot; /assets/images/optimised/28b464f5-320.webp 320w, /assets/images/optimised/28b464f5-640.webp 640w, /assets/images/optimised/28b464f5-960.webp 960w, /assets/images/optimised/28b464f5-1200.webp 1200w, /assets/images/optimised/28b464f5-1800.webp 1800w, /assets/images/optimised/28b464f5.webp 1920w,&quot; &gt; &lt;img
+    loading=&quot;lazy&quot;
+    class=&quot;small&quot;
+    alt=&quot;Its Pusheen&quot;
+    src=&quot;/assets/images/optimised/28b464f5-320.jpeg&quot;
+    sizes=&#39;(min-width: 1024px) 1024px, 100vw&#39;
+    srcset=&quot; /assets/images/optimised/28b464f5-320.jpeg 320w, /assets/images/optimised/28b464f5-640.jpeg 640w, /assets/images/optimised/28b464f5-960.jpeg 960w, /assets/images/optimised/28b464f5-1200.jpeg 1200w, /assets/images/optimised/28b464f5-1800.jpeg 1800w, /assets/images/optimised/28b464f5.jpeg 1920w,&quot;
+    width=&quot;320&quot;
+    height=&quot;180&quot;&gt; &lt;/picture&gt;&lt;/div&gt;
+  
+  
   &lt;div class=&quot;overlay&quot;&gt;
     &lt;div class=&quot;item-title&quot;&gt;asdsadsa&lt;/div&gt;
     &lt;div class=&quot;item-brand&quot;&gt;&lt;/div&gt;
@@ -226,7 +247,7 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.&lt;/p&gt;
     &lt;/li&gt;
   &lt;li class=&quot;postlist-item&quot;&gt;
     &lt;a href=&quot;/blog/test/&quot;&gt;
-  &lt;img src=&quot;https://monkmedia.com.au&quot; class=&quot;thumb&quot; alt=&quot;&quot;&gt;
+  
   &lt;div class=&quot;overlay&quot;&gt;
     &lt;div class=&quot;item-title&quot;&gt;test&lt;/div&gt;
     &lt;div class=&quot;item-brand&quot;&gt;&lt;/div&gt;
@@ -235,7 +256,7 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.&lt;/p&gt;
     &lt;/li&gt;
   &lt;li class=&quot;postlist-item&quot;&gt;
     &lt;a href=&quot;/search.json&quot;&gt;
-  &lt;img src=&quot;https://monkmedia.com.au&quot; class=&quot;thumb&quot; alt=&quot;&quot;&gt;
+  
   &lt;div class=&quot;overlay&quot;&gt;
     &lt;div class=&quot;item-title&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;item-brand&quot;&gt;&lt;/div&gt;
@@ -244,7 +265,7 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.&lt;/p&gt;
     &lt;/li&gt;
   &lt;li class=&quot;postlist-item&quot;&gt;
     &lt;a href=&quot;/sitemap.xml&quot;&gt;
-  &lt;img src=&quot;https://monkmedia.com.au&quot; class=&quot;thumb&quot; alt=&quot;&quot;&gt;
+  
   &lt;div class=&quot;overlay&quot;&gt;
     &lt;div class=&quot;item-title&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;item-brand&quot;&gt;&lt;/div&gt;
@@ -252,8 +273,27 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.&lt;/p&gt;
 &lt;/a&gt;
     &lt;/li&gt;
   &lt;li class=&quot;postlist-item&quot;&gt;
+    &lt;a href=&quot;/about/&quot;&gt;
+    &lt;div class=&quot;image-wrapper animate&quot;&gt;&lt;picture&gt; &lt;source type=&quot;image/webp&quot; srcset=&quot; /assets/images/optimised/28b464f5-320.webp 320w, /assets/images/optimised/28b464f5-640.webp 640w, /assets/images/optimised/28b464f5-960.webp 960w, /assets/images/optimised/28b464f5-1200.webp 1200w, /assets/images/optimised/28b464f5-1800.webp 1800w, /assets/images/optimised/28b464f5.webp 1920w,&quot; &gt; &lt;img
+    loading=&quot;lazy&quot;
+    class=&quot;small&quot;
+    alt=&quot;Its Pusheen&quot;
+    src=&quot;/assets/images/optimised/28b464f5-320.jpeg&quot;
+    sizes=&#39;(min-width: 1024px) 1024px, 100vw&#39;
+    srcset=&quot; /assets/images/optimised/28b464f5-320.jpeg 320w, /assets/images/optimised/28b464f5-640.jpeg 640w, /assets/images/optimised/28b464f5-960.jpeg 960w, /assets/images/optimised/28b464f5-1200.jpeg 1200w, /assets/images/optimised/28b464f5-1800.jpeg 1800w, /assets/images/optimised/28b464f5.jpeg 1920w,&quot;
+    width=&quot;320&quot;
+    height=&quot;180&quot;&gt; &lt;/picture&gt;&lt;/div&gt;
+  
+  
+  &lt;div class=&quot;overlay&quot;&gt;
+    &lt;div class=&quot;item-title&quot;&gt;About&lt;/div&gt;
+    &lt;div class=&quot;item-brand&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;li class=&quot;postlist-item&quot;&gt;
     &lt;a href=&quot;/tag/all/&quot;&gt;
-  &lt;img src=&quot;https://monkmedia.com.au&quot; class=&quot;thumb&quot; alt=&quot;&quot;&gt;
+  
   &lt;div class=&quot;overlay&quot;&gt;
     &lt;div class=&quot;item-title&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;item-brand&quot;&gt;&lt;/div&gt;
@@ -262,7 +302,7 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.&lt;/p&gt;
     &lt;/li&gt;
   &lt;li class=&quot;postlist-item&quot;&gt;
     &lt;a href=&quot;/tag/page/&quot;&gt;
-  &lt;img src=&quot;https://monkmedia.com.au&quot; class=&quot;thumb&quot; alt=&quot;&quot;&gt;
+  
   &lt;div class=&quot;overlay&quot;&gt;
     &lt;div class=&quot;item-title&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;item-brand&quot;&gt;&lt;/div&gt;
@@ -271,7 +311,7 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.&lt;/p&gt;
     &lt;/li&gt;
   &lt;li class=&quot;postlist-item&quot;&gt;
     &lt;a href=&quot;/tag/post/&quot;&gt;
-  &lt;img src=&quot;https://monkmedia.com.au&quot; class=&quot;thumb&quot; alt=&quot;&quot;&gt;
+  
   &lt;div class=&quot;overlay&quot;&gt;
     &lt;div class=&quot;item-title&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;item-brand&quot;&gt;&lt;/div&gt;
@@ -280,7 +320,7 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.&lt;/p&gt;
     &lt;/li&gt;
   &lt;li class=&quot;postlist-item&quot;&gt;
     &lt;a href=&quot;/tag/random/&quot;&gt;
-  &lt;img src=&quot;https://monkmedia.com.au&quot; class=&quot;thumb&quot; alt=&quot;&quot;&gt;
+  
   &lt;div class=&quot;overlay&quot;&gt;
     &lt;div class=&quot;item-title&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;item-brand&quot;&gt;&lt;/div&gt;
@@ -289,7 +329,7 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.&lt;/p&gt;
     &lt;/li&gt;
   &lt;li class=&quot;postlist-item&quot;&gt;
     &lt;a href=&quot;/tag/test/&quot;&gt;
-  &lt;img src=&quot;https://monkmedia.com.au&quot; class=&quot;thumb&quot; alt=&quot;&quot;&gt;
+  
   &lt;div class=&quot;overlay&quot;&gt;
     &lt;div class=&quot;item-title&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;item-brand&quot;&gt;&lt;/div&gt;
@@ -298,7 +338,7 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.&lt;/p&gt;
     &lt;/li&gt;
   &lt;li class=&quot;postlist-item&quot;&gt;
     &lt;a href=&quot;/tag/tagList/&quot;&gt;
-  &lt;img src=&quot;https://monkmedia.com.au&quot; class=&quot;thumb&quot; alt=&quot;&quot;&gt;
+  
   &lt;div class=&quot;overlay&quot;&gt;
     &lt;div class=&quot;item-title&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;item-brand&quot;&gt;&lt;/div&gt;
@@ -307,7 +347,7 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.&lt;/p&gt;
     &lt;/li&gt;
   &lt;li class=&quot;postlist-item&quot;&gt;
     &lt;a href=&quot;/tags/&quot;&gt;
-  &lt;img src=&quot;https://monkmedia.com.au&quot; class=&quot;thumb&quot; alt=&quot;&quot;&gt;
+  
   &lt;div class=&quot;overlay&quot;&gt;
     &lt;div class=&quot;item-title&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;item-brand&quot;&gt;&lt;/div&gt;
@@ -316,7 +356,7 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.&lt;/p&gt;
     &lt;/li&gt;
   &lt;li class=&quot;postlist-item&quot;&gt;
     &lt;a href=&quot;/test-page/&quot;&gt;
-  &lt;img src=&quot;https://monkmedia.com.au&quot; class=&quot;thumb&quot; alt=&quot;&quot;&gt;
+  
   &lt;div class=&quot;overlay&quot;&gt;
     &lt;div class=&quot;item-title&quot;&gt;Test page&lt;/div&gt;
     &lt;div class=&quot;item-brand&quot;&gt;&lt;/div&gt;
@@ -325,7 +365,17 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.&lt;/p&gt;
     &lt;/li&gt;
   &lt;li class=&quot;postlist-item&quot;&gt;
     &lt;a href=&quot;/&quot;&gt;
-  &lt;img src=&quot;https://monkmedia.com.au[object Object]&quot; class=&quot;thumb&quot; alt=&quot;&quot;&gt;
+    &lt;div class=&quot;image-wrapper animate&quot;&gt;&lt;picture&gt; &lt;source type=&quot;image/webp&quot; srcset=&quot; /assets/images/optimised/cefe4cde-320.webp 320w, /assets/images/optimised/cefe4cde-640.webp 640w, /assets/images/optimised/cefe4cde-960.webp 960w, /assets/images/optimised/cefe4cde-1200.webp 1200w, /assets/images/optimised/cefe4cde-1800.webp 1800w, /assets/images/optimised/cefe4cde.webp 1920w,&quot; &gt; &lt;img
+    loading=&quot;lazy&quot;
+    class=&quot;small&quot;
+    alt=&quot;Its Pusheen&quot;
+    src=&quot;/assets/images/optimised/cefe4cde-320.jpeg&quot;
+    sizes=&#39;(min-width: 1024px) 1024px, 100vw&#39;
+    srcset=&quot; /assets/images/optimised/cefe4cde-320.jpeg 320w, /assets/images/optimised/cefe4cde-640.jpeg 640w, /assets/images/optimised/cefe4cde-960.jpeg 960w, /assets/images/optimised/cefe4cde-1200.jpeg 1200w, /assets/images/optimised/cefe4cde-1800.jpeg 1800w, /assets/images/optimised/cefe4cde.jpeg 1920w,&quot;
+    width=&quot;320&quot;
+    height=&quot;180&quot;&gt; &lt;/picture&gt;&lt;/div&gt;
+  
+  
   &lt;div class=&quot;overlay&quot;&gt;
     &lt;div class=&quot;item-title&quot;&gt;Home&lt;/div&gt;
     &lt;div class=&quot;item-brand&quot;&gt;&lt;/div&gt;
@@ -347,7 +397,17 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.&lt;/p&gt;
   
   &lt;ul class=&quot;tag list&quot;&gt;&lt;li class=&quot;postlist-item&quot;&gt;
     &lt;a href=&quot;/about/&quot;&gt;
-  &lt;img src=&quot;https://monkmedia.com.au[object Object]&quot; class=&quot;thumb&quot; alt=&quot;&quot;&gt;
+    &lt;div class=&quot;image-wrapper animate&quot;&gt;&lt;picture&gt; &lt;source type=&quot;image/webp&quot; srcset=&quot; /assets/images/optimised/28b464f5-320.webp 320w, /assets/images/optimised/28b464f5-640.webp 640w, /assets/images/optimised/28b464f5-960.webp 960w, /assets/images/optimised/28b464f5-1200.webp 1200w, /assets/images/optimised/28b464f5-1800.webp 1800w, /assets/images/optimised/28b464f5.webp 1920w,&quot; &gt; &lt;img
+    loading=&quot;lazy&quot;
+    class=&quot;small&quot;
+    alt=&quot;Its Pusheen&quot;
+    src=&quot;/assets/images/optimised/28b464f5-320.jpeg&quot;
+    sizes=&#39;(min-width: 1024px) 1024px, 100vw&#39;
+    srcset=&quot; /assets/images/optimised/28b464f5-320.jpeg 320w, /assets/images/optimised/28b464f5-640.jpeg 640w, /assets/images/optimised/28b464f5-960.jpeg 960w, /assets/images/optimised/28b464f5-1200.jpeg 1200w, /assets/images/optimised/28b464f5-1800.jpeg 1800w, /assets/images/optimised/28b464f5.jpeg 1920w,&quot;
+    width=&quot;320&quot;
+    height=&quot;180&quot;&gt; &lt;/picture&gt;&lt;/div&gt;
+  
+  
   &lt;div class=&quot;overlay&quot;&gt;
     &lt;div class=&quot;item-title&quot;&gt;About&lt;/div&gt;
     &lt;div class=&quot;item-brand&quot;&gt;&lt;/div&gt;
@@ -356,7 +416,17 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.&lt;/p&gt;
     &lt;/li&gt;
   &lt;li class=&quot;postlist-item&quot;&gt;
     &lt;a href=&quot;/contact/&quot;&gt;
-  &lt;img src=&quot;https://monkmedia.com.au[object Object]&quot; class=&quot;thumb&quot; alt=&quot;&quot;&gt;
+    &lt;div class=&quot;image-wrapper animate&quot;&gt;&lt;picture&gt; &lt;source type=&quot;image/webp&quot; srcset=&quot; /assets/images/optimised/28b464f5-320.webp 320w, /assets/images/optimised/28b464f5-640.webp 640w, /assets/images/optimised/28b464f5-960.webp 960w, /assets/images/optimised/28b464f5-1200.webp 1200w, /assets/images/optimised/28b464f5-1800.webp 1800w, /assets/images/optimised/28b464f5.webp 1920w,&quot; &gt; &lt;img
+    loading=&quot;lazy&quot;
+    class=&quot;small&quot;
+    alt=&quot;Its Pusheen&quot;
+    src=&quot;/assets/images/optimised/28b464f5-320.jpeg&quot;
+    sizes=&#39;(min-width: 1024px) 1024px, 100vw&#39;
+    srcset=&quot; /assets/images/optimised/28b464f5-320.jpeg 320w, /assets/images/optimised/28b464f5-640.jpeg 640w, /assets/images/optimised/28b464f5-960.jpeg 960w, /assets/images/optimised/28b464f5-1200.jpeg 1200w, /assets/images/optimised/28b464f5-1800.jpeg 1800w, /assets/images/optimised/28b464f5.jpeg 1920w,&quot;
+    width=&quot;320&quot;
+    height=&quot;180&quot;&gt; &lt;/picture&gt;&lt;/div&gt;
+  
+  
   &lt;div class=&quot;overlay&quot;&gt;
     &lt;div class=&quot;item-title&quot;&gt;Contact&lt;/div&gt;
     &lt;div class=&quot;item-brand&quot;&gt;&lt;/div&gt;
@@ -365,7 +435,7 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.&lt;/p&gt;
     &lt;/li&gt;
   &lt;li class=&quot;postlist-item&quot;&gt;
     &lt;a href=&quot;/test-page/&quot;&gt;
-  &lt;img src=&quot;https://monkmedia.com.au&quot; class=&quot;thumb&quot; alt=&quot;&quot;&gt;
+  
   &lt;div class=&quot;overlay&quot;&gt;
     &lt;div class=&quot;item-title&quot;&gt;Test page&lt;/div&gt;
     &lt;div class=&quot;item-brand&quot;&gt;&lt;/div&gt;
@@ -374,7 +444,17 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.&lt;/p&gt;
     &lt;/li&gt;
   &lt;li class=&quot;postlist-item&quot;&gt;
     &lt;a href=&quot;/&quot;&gt;
-  &lt;img src=&quot;https://monkmedia.com.au[object Object]&quot; class=&quot;thumb&quot; alt=&quot;&quot;&gt;
+    &lt;div class=&quot;image-wrapper animate&quot;&gt;&lt;picture&gt; &lt;source type=&quot;image/webp&quot; srcset=&quot; /assets/images/optimised/cefe4cde-320.webp 320w, /assets/images/optimised/cefe4cde-640.webp 640w, /assets/images/optimised/cefe4cde-960.webp 960w, /assets/images/optimised/cefe4cde-1200.webp 1200w, /assets/images/optimised/cefe4cde-1800.webp 1800w, /assets/images/optimised/cefe4cde.webp 1920w,&quot; &gt; &lt;img
+    loading=&quot;lazy&quot;
+    class=&quot;small&quot;
+    alt=&quot;Its Pusheen&quot;
+    src=&quot;/assets/images/optimised/cefe4cde-320.jpeg&quot;
+    sizes=&#39;(min-width: 1024px) 1024px, 100vw&#39;
+    srcset=&quot; /assets/images/optimised/cefe4cde-320.jpeg 320w, /assets/images/optimised/cefe4cde-640.jpeg 640w, /assets/images/optimised/cefe4cde-960.jpeg 960w, /assets/images/optimised/cefe4cde-1200.jpeg 1200w, /assets/images/optimised/cefe4cde-1800.jpeg 1800w, /assets/images/optimised/cefe4cde.jpeg 1920w,&quot;
+    width=&quot;320&quot;
+    height=&quot;180&quot;&gt; &lt;/picture&gt;&lt;/div&gt;
+  
+  
   &lt;div class=&quot;overlay&quot;&gt;
     &lt;div class=&quot;item-title&quot;&gt;Home&lt;/div&gt;
     &lt;div class=&quot;item-brand&quot;&gt;&lt;/div&gt;
@@ -396,7 +476,17 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.&lt;/p&gt;
   
   &lt;ul class=&quot;tag list&quot;&gt;&lt;li class=&quot;postlist-item&quot;&gt;
     &lt;a href=&quot;/blog/a-post-page/&quot;&gt;
-  &lt;img src=&quot;https://monkmedia.com.au[object Object]&quot; class=&quot;thumb&quot; alt=&quot;&quot;&gt;
+    &lt;div class=&quot;image-wrapper animate&quot;&gt;&lt;picture&gt; &lt;source type=&quot;image/webp&quot; srcset=&quot; /assets/images/optimised/cefe4cde-320.webp 320w, /assets/images/optimised/cefe4cde-640.webp 640w, /assets/images/optimised/cefe4cde-960.webp 960w, /assets/images/optimised/cefe4cde-1200.webp 1200w, /assets/images/optimised/cefe4cde-1800.webp 1800w, /assets/images/optimised/cefe4cde.webp 1920w,&quot; &gt; &lt;img
+    loading=&quot;lazy&quot;
+    class=&quot;small&quot;
+    alt=&quot;Its Pusheen&quot;
+    src=&quot;/assets/images/optimised/cefe4cde-320.jpeg&quot;
+    sizes=&#39;(min-width: 1024px) 1024px, 100vw&#39;
+    srcset=&quot; /assets/images/optimised/cefe4cde-320.jpeg 320w, /assets/images/optimised/cefe4cde-640.jpeg 640w, /assets/images/optimised/cefe4cde-960.jpeg 960w, /assets/images/optimised/cefe4cde-1200.jpeg 1200w, /assets/images/optimised/cefe4cde-1800.jpeg 1800w, /assets/images/optimised/cefe4cde.jpeg 1920w,&quot;
+    width=&quot;320&quot;
+    height=&quot;180&quot;&gt; &lt;/picture&gt;&lt;/div&gt;
+  
+  
   &lt;div class=&quot;overlay&quot;&gt;
     &lt;div class=&quot;item-title&quot;&gt;A post page&lt;/div&gt;
     &lt;div class=&quot;item-brand&quot;&gt;&lt;/div&gt;
@@ -405,7 +495,17 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.&lt;/p&gt;
     &lt;/li&gt;
   &lt;li class=&quot;postlist-item&quot;&gt;
     &lt;a href=&quot;/blog/asdsadsa/&quot;&gt;
-  &lt;img src=&quot;https://monkmedia.com.au&quot; class=&quot;thumb&quot; alt=&quot;&quot;&gt;
+    &lt;div class=&quot;image-wrapper animate&quot;&gt;&lt;picture&gt; &lt;source type=&quot;image/webp&quot; srcset=&quot; /assets/images/optimised/28b464f5-320.webp 320w, /assets/images/optimised/28b464f5-640.webp 640w, /assets/images/optimised/28b464f5-960.webp 960w, /assets/images/optimised/28b464f5-1200.webp 1200w, /assets/images/optimised/28b464f5-1800.webp 1800w, /assets/images/optimised/28b464f5.webp 1920w,&quot; &gt; &lt;img
+    loading=&quot;lazy&quot;
+    class=&quot;small&quot;
+    alt=&quot;Its Pusheen&quot;
+    src=&quot;/assets/images/optimised/28b464f5-320.jpeg&quot;
+    sizes=&#39;(min-width: 1024px) 1024px, 100vw&#39;
+    srcset=&quot; /assets/images/optimised/28b464f5-320.jpeg 320w, /assets/images/optimised/28b464f5-640.jpeg 640w, /assets/images/optimised/28b464f5-960.jpeg 960w, /assets/images/optimised/28b464f5-1200.jpeg 1200w, /assets/images/optimised/28b464f5-1800.jpeg 1800w, /assets/images/optimised/28b464f5.jpeg 1920w,&quot;
+    width=&quot;320&quot;
+    height=&quot;180&quot;&gt; &lt;/picture&gt;&lt;/div&gt;
+  
+  
   &lt;div class=&quot;overlay&quot;&gt;
     &lt;div class=&quot;item-title&quot;&gt;asdsadsa&lt;/div&gt;
     &lt;div class=&quot;item-brand&quot;&gt;&lt;/div&gt;
@@ -414,7 +514,7 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.&lt;/p&gt;
     &lt;/li&gt;
   &lt;li class=&quot;postlist-item&quot;&gt;
     &lt;a href=&quot;/blog/test/&quot;&gt;
-  &lt;img src=&quot;https://monkmedia.com.au&quot; class=&quot;thumb&quot; alt=&quot;&quot;&gt;
+  
   &lt;div class=&quot;overlay&quot;&gt;
     &lt;div class=&quot;item-title&quot;&gt;test&lt;/div&gt;
     &lt;div class=&quot;item-brand&quot;&gt;&lt;/div&gt;
@@ -436,7 +536,17 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.&lt;/p&gt;
   
   &lt;ul class=&quot;tag list&quot;&gt;&lt;li class=&quot;postlist-item&quot;&gt;
     &lt;a href=&quot;/blog/a-post-page/&quot;&gt;
-  &lt;img src=&quot;https://monkmedia.com.au[object Object]&quot; class=&quot;thumb&quot; alt=&quot;&quot;&gt;
+    &lt;div class=&quot;image-wrapper animate&quot;&gt;&lt;picture&gt; &lt;source type=&quot;image/webp&quot; srcset=&quot; /assets/images/optimised/cefe4cde-320.webp 320w, /assets/images/optimised/cefe4cde-640.webp 640w, /assets/images/optimised/cefe4cde-960.webp 960w, /assets/images/optimised/cefe4cde-1200.webp 1200w, /assets/images/optimised/cefe4cde-1800.webp 1800w, /assets/images/optimised/cefe4cde.webp 1920w,&quot; &gt; &lt;img
+    loading=&quot;lazy&quot;
+    class=&quot;small&quot;
+    alt=&quot;Its Pusheen&quot;
+    src=&quot;/assets/images/optimised/cefe4cde-320.jpeg&quot;
+    sizes=&#39;(min-width: 1024px) 1024px, 100vw&#39;
+    srcset=&quot; /assets/images/optimised/cefe4cde-320.jpeg 320w, /assets/images/optimised/cefe4cde-640.jpeg 640w, /assets/images/optimised/cefe4cde-960.jpeg 960w, /assets/images/optimised/cefe4cde-1200.jpeg 1200w, /assets/images/optimised/cefe4cde-1800.jpeg 1800w, /assets/images/optimised/cefe4cde.jpeg 1920w,&quot;
+    width=&quot;320&quot;
+    height=&quot;180&quot;&gt; &lt;/picture&gt;&lt;/div&gt;
+  
+  
   &lt;div class=&quot;overlay&quot;&gt;
     &lt;div class=&quot;item-title&quot;&gt;A post page&lt;/div&gt;
     &lt;div class=&quot;item-brand&quot;&gt;&lt;/div&gt;
@@ -458,7 +568,17 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.&lt;/p&gt;
   
   &lt;ul class=&quot;tag list&quot;&gt;&lt;li class=&quot;postlist-item&quot;&gt;
     &lt;a href=&quot;/blog/a-post-page/&quot;&gt;
-  &lt;img src=&quot;https://monkmedia.com.au[object Object]&quot; class=&quot;thumb&quot; alt=&quot;&quot;&gt;
+    &lt;div class=&quot;image-wrapper animate&quot;&gt;&lt;picture&gt; &lt;source type=&quot;image/webp&quot; srcset=&quot; /assets/images/optimised/cefe4cde-320.webp 320w, /assets/images/optimised/cefe4cde-640.webp 640w, /assets/images/optimised/cefe4cde-960.webp 960w, /assets/images/optimised/cefe4cde-1200.webp 1200w, /assets/images/optimised/cefe4cde-1800.webp 1800w, /assets/images/optimised/cefe4cde.webp 1920w,&quot; &gt; &lt;img
+    loading=&quot;lazy&quot;
+    class=&quot;small&quot;
+    alt=&quot;Its Pusheen&quot;
+    src=&quot;/assets/images/optimised/cefe4cde-320.jpeg&quot;
+    sizes=&#39;(min-width: 1024px) 1024px, 100vw&#39;
+    srcset=&quot; /assets/images/optimised/cefe4cde-320.jpeg 320w, /assets/images/optimised/cefe4cde-640.jpeg 640w, /assets/images/optimised/cefe4cde-960.jpeg 960w, /assets/images/optimised/cefe4cde-1200.jpeg 1200w, /assets/images/optimised/cefe4cde-1800.jpeg 1800w, /assets/images/optimised/cefe4cde.jpeg 1920w,&quot;
+    width=&quot;320&quot;
+    height=&quot;180&quot;&gt; &lt;/picture&gt;&lt;/div&gt;
+  
+  
   &lt;div class=&quot;overlay&quot;&gt;
     &lt;div class=&quot;item-title&quot;&gt;A post page&lt;/div&gt;
     &lt;div class=&quot;item-brand&quot;&gt;&lt;/div&gt;
@@ -467,7 +587,17 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.&lt;/p&gt;
     &lt;/li&gt;
   &lt;li class=&quot;postlist-item&quot;&gt;
     &lt;a href=&quot;/blog/asdsadsa/&quot;&gt;
-  &lt;img src=&quot;https://monkmedia.com.au&quot; class=&quot;thumb&quot; alt=&quot;&quot;&gt;
+    &lt;div class=&quot;image-wrapper animate&quot;&gt;&lt;picture&gt; &lt;source type=&quot;image/webp&quot; srcset=&quot; /assets/images/optimised/28b464f5-320.webp 320w, /assets/images/optimised/28b464f5-640.webp 640w, /assets/images/optimised/28b464f5-960.webp 960w, /assets/images/optimised/28b464f5-1200.webp 1200w, /assets/images/optimised/28b464f5-1800.webp 1800w, /assets/images/optimised/28b464f5.webp 1920w,&quot; &gt; &lt;img
+    loading=&quot;lazy&quot;
+    class=&quot;small&quot;
+    alt=&quot;Its Pusheen&quot;
+    src=&quot;/assets/images/optimised/28b464f5-320.jpeg&quot;
+    sizes=&#39;(min-width: 1024px) 1024px, 100vw&#39;
+    srcset=&quot; /assets/images/optimised/28b464f5-320.jpeg 320w, /assets/images/optimised/28b464f5-640.jpeg 640w, /assets/images/optimised/28b464f5-960.jpeg 960w, /assets/images/optimised/28b464f5-1200.jpeg 1200w, /assets/images/optimised/28b464f5-1800.jpeg 1800w, /assets/images/optimised/28b464f5.jpeg 1920w,&quot;
+    width=&quot;320&quot;
+    height=&quot;180&quot;&gt; &lt;/picture&gt;&lt;/div&gt;
+  
+  
   &lt;div class=&quot;overlay&quot;&gt;
     &lt;div class=&quot;item-title&quot;&gt;asdsadsa&lt;/div&gt;
     &lt;div class=&quot;item-brand&quot;&gt;&lt;/div&gt;
@@ -489,7 +619,7 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.&lt;/p&gt;
   
   &lt;ul class=&quot;tag list&quot;&gt;&lt;li class=&quot;postlist-item postlist-item-active&quot;&gt;
     &lt;a href=&quot;&quot;&gt;
-  &lt;img src=&quot;https://monkmedia.com.au&quot; class=&quot;thumb&quot; alt=&quot;&quot;&gt;
+  
   &lt;div class=&quot;overlay&quot;&gt;
     &lt;div class=&quot;item-title&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;item-brand&quot;&gt;&lt;/div&gt;
@@ -498,7 +628,7 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.&lt;/p&gt;
     &lt;/li&gt;
   &lt;li class=&quot;postlist-item postlist-item-active&quot;&gt;
     &lt;a href=&quot;&quot;&gt;
-  &lt;img src=&quot;https://monkmedia.com.au&quot; class=&quot;thumb&quot; alt=&quot;&quot;&gt;
+  
   &lt;div class=&quot;overlay&quot;&gt;
     &lt;div class=&quot;item-title&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;item-brand&quot;&gt;&lt;/div&gt;
@@ -1226,7 +1356,7 @@ Note the indentation of the content with the template tags (again, a rendering i
       &lt;time datetime=&quot;Tue Nov 03 2020 17:15:45 GMT+0800 (Australian Western Standard Time)&quot;&gt;November 3, 2020&lt;/time&gt;
     &lt;/li&gt;&lt;li&gt;
       &lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt; -
-      &lt;time datetime=&quot;Fri Nov 06 2020 19:07:09 GMT+0800 (Australian Western Standard Time)&quot;&gt;November 6, 2020&lt;/time&gt;
+      &lt;time datetime=&quot;Tue Nov 10 2020 16:07:44 GMT+0800 (Australian Western Standard Time)&quot;&gt;November 10, 2020&lt;/time&gt;
     &lt;/li&gt;&lt;/ul&gt;
 &lt;h2 id=&quot;posts-list&quot;&gt;Posts list &lt;a class=&quot;anchor-link&quot; href=&quot;#posts-list&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
   &lt;ul class=&quot;listing animate&quot;&gt;&lt;li&gt;
@@ -1239,7 +1369,7 @@ Note the indentation of the content with the template tags (again, a rendering i
       &lt;a href=&quot;/blog/test/&quot;&gt;test&lt;/a&gt; -
       &lt;time datetime=&quot;Thu Jul 11 2019 15:52:35 GMT+0800 (Australian Western Standard Time)&quot;&gt;July 11, 2019&lt;/time&gt;
     &lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&quot;&quot;&gt;Last updated&lt;/a&gt; - &lt;time datetime=&quot;Fri Nov 06 2020 19:07:09 GMT+0800 (Australian Western Standard Time)&quot;&gt;November 6, 2020, 19:07&lt;/time&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;&quot;&gt;Last updated&lt;/a&gt; - &lt;time datetime=&quot;Tue Nov 10 2020 16:07:44 GMT+0800 (Australian Western Standard Time)&quot;&gt;November 10, 2020, 16:07&lt;/time&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
