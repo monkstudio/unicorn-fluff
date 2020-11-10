@@ -33,6 +33,7 @@ module.exports = (config) => {
   config.addPassthroughCopy('src/assets/images');
   config.addPassthroughCopy('src/assets/scripts/vendor');
   config.addPassthroughCopy('src/assets/static');
+  config.addPassthroughCopy('src/admin');
 
   /*
   -ˋˏ *.·:·.⟐.·:·.* ˎˊ-
