@@ -15,13 +15,15 @@ collections:
       - label: "Featured Thumbnail"
         name: "thumbnail"
         widget: "object"
-        collapsed: true
+        collapsed: false
         fields:
           - {label: Image", name: "url", widget: "image"}
           - {label: "Alt", name: "alt", widget: "string",required: false, hint: "Add an alt tag."}
           - {label: "Classes", name: "classes", widget: "string",required: false, hint: "Add addtional classes separated by a space"}
       - {label: "Body", name: "body", widget: "markdown", required: false}
-      - {label: "Tags", name: tags, widget: list, default: ['post'],required: false}
+      - {label: "Tags", name: tags, widget: list, default: ['post'], required: false}
+      - {label: "Page Classes", name: "pageClasses", widget: "string", required: false, hint: "Add addtional page classes separated by a space"}
+
   - name: "pages" # Used in routes, e.g., /admin/collections/blog
     label: "Pages" # Used in the UI
     folder: "src/pages" # The path to the folder where the documents are store
@@ -32,10 +34,11 @@ collections:
       - label: "Featured Thumbnail"
         name: "thumbnail"
         widget: "object"
-        collapsed: true
+        collapsed: false
         fields:
           - {label: Image", name: "url", widget: "image"}
           - {label: "Alt", name: "alt", widget: "string",required: false, hint: "Add an alt tag."}
           - {label: "Classes", name: "classes", widget: "string",required: false, hint: "Add addtional classes separated by a space"}
       - {label: "Body", name: "body", widget: "markdown", required: false}
-      - {label: "Tags", name: tags, widget: list, default: ['page'],required: false, hint: "Add/remove the nav tag to include it in the site menu."}
+      - {label: "Tags", name: tags, widget: list, default: ['page'],required: false}
+      - {label: "Page Classes", name: "pageClasses", widget: "string", required: false, hint: "Add addtional page classes separated by a space"}
