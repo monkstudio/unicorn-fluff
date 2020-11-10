@@ -17,7 +17,7 @@ collections:
         widget: "object"
         collapsed: false
         fields:
-          - {label: Image", name: "url", widget: "image"}
+          - {label: "Image", name: "url", widget: "image"}
           - {label: "Alt", name: "alt", widget: "string",required: false, hint: "Add an alt tag."}
           - {label: "Classes", name: "classes", widget: "string",required: false, hint: "Add addtional classes separated by a space"}
       - {label: "Body", name: "body", widget: "markdown", required: false}
@@ -36,7 +36,7 @@ collections:
         widget: "object"
         collapsed: false
         fields:
-          - {label: Image", name: "url", widget: "image"}
+          - {label: "Image", name: "url", widget: "image"}
           - {label: "Alt", name: "alt", widget: "string",required: false, hint: "Add an alt tag."}
           - {label: "Classes", name: "classes", widget: "string",required: false, hint: "Add addtional classes separated by a space"}
       - {label: "Body", name: "body", widget: "markdown", required: false}
