@@ -1,13 +1,13 @@
 ---
 title: A post page
-tags:
- - post
- - random
- - test
+date: 2020-11-10T09:43:21.605Z
 thumbnail:
-  url: /assets/images/Pusheen_Zoom_Backgrounds_room_2020.jpg
-  alt: a pic
-  classes: feature test asodhioas
+  url: assets/images/pusheen_zoom_background_beach_2020.jpg
+  alt: test
+  classes: test
+tags:
+  - test
+pageClasses: test
 ---
 
 Hello.
