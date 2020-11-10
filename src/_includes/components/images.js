@@ -20,7 +20,7 @@ module.exports = async (src, alt, classes) => {
     (acc, format) => ({
       ...acc,
       [format]: stats[format].reduce(
-        (_acc, curr) => `${_acc} ${curr.srcset} ,`,
+        (_acc, curr) => `${_acc} ${curr.srcset},`,
         ""
       ),
     }),
@@ -40,5 +40,6 @@ module.exports = async (src, alt, classes) => {
     height="${lowestSrc.height}">`;
 
   const markup = `<div class="image-wrapper animate"><picture> ${source} ${img} </picture></div>`;
+
   return markup;
 }

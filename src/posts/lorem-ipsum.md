@@ -3,7 +3,10 @@ title: asdsadsa
 tags:
  - post
  - test
-
+thumbnail:
+  url: /assets/images/Pusheen_Zoom_Background_Campfire_2020.jpg
+  alt: a pic
+  classes: feature test asodhioas
 ---
 ## a header
 

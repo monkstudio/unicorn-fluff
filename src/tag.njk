@@ -12,11 +12,11 @@ permalink: /tag/{{ tag }}/
 
   {% set postslist = collections[ tag ] %}
   <ul class="tag list">
-  {%- for post in postslist |  sort(attribute='date') -%}
+  {%- asyncEach post in postslist |  sort(attribute='date') -%}
     <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
     {% include 'partials/excerpt.njk' %}
     </li>
-  {% endfor %}
+  {% endeach %}
   </ul>
 </div>
 

@@ -6,7 +6,7 @@ public_folder: "images" # The src attribute for uploaded media will begin with /
 collections:
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
     label: "Posts" # Used in the UI
-    folder: "src/site/posts" # The path to the folder where the documents are stored
+    folder: "src/posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -17,20 +17,11 @@ collections:
       - {label: "Tags", name: tags, widget: list, default: ['post'],required: false}
   - name: "pages" # Used in routes, e.g., /admin/collections/blog
     label: "Pages" # Used in the UI
-    folder: "src/site/pages" # The path to the folder where the documents are store
+    folder: "src/pages" # The path to the folder where the documents are store
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields:
       - {label: "Title", name: title, widget: string}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown", required: false}
-      - {label: "Menu Order", name: menuorder, widget: number,required: false, hint: "Input a number to order the page in the site menu."}
       - {label: "Tags", name: tags, widget: list, default: ['page','nav'],required: false, hint: "Add/remove the nav tag to include it in the site menu."}
-      # - label: Team
-      #   name: team
-      #   widget: list
-      #   required: false
-      #   fields:
-      #     - {label: Name, name: name, widget: string}
-      #     - {label: Position, name: position, widget: string}
-      #     - {label: Photo, name: photo, widget: image}

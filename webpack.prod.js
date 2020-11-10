@@ -9,13 +9,13 @@ module.exports = merge(dev, {
   devtool: 'source-map',
   output: { filename: '[hash].js' },
   optimization: {
-    minimizer: [
-      new TerserPlugin({
-        sourceMap: true
-      }),
-      new OptimizeCssAssetsPlugin({
-        cssProcessorOptions: { map: true }
-      })
-    ]
+    // minimizer: [
+    //   new TerserPlugin({
+    //     sourceMap: true
+    //   }),
+    //   new OptimizeCssAssetsPlugin({
+    //     cssProcessorOptions: { map: true }
+    //   })
+    // ]
   }
 });
