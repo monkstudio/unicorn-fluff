@@ -1,8 +1,7 @@
 ---
 title: Contact
-
 thumbnail:
-  url: /assets/images/Pusheen_Zoom_Background_Campfire_2020.jpg
+  url: assets/images/pusheen_zoom_background_beach_2020.jpg
   alt: a pic
   classes: feature test asodhioas
 ---
