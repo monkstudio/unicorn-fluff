@@ -2,7 +2,9 @@ backend:
   name: git-gateway
 publish_mode: editorial_workflow
 media_folder: "/src/assets/images"
-public_folder: "/assets/images" 
+public_folder: "/assets/images"
+site_url: https://unicorn-fluff.netlify.app
+display_url: https://unicorn-fluff.netlify.app
 collections:
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
     label: "Posts" # Used in the UI

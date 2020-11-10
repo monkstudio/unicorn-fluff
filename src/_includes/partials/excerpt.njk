@@ -2,7 +2,6 @@
   {%- if post.data.thumbnail.url %}
     {% image  post.data.thumbnail.url, 'Its Pusheen', 'small' %}
   {% endif %}
-  {# <img src="{{site.baseUrl}}{{ post.data.thumbnail }}" class="thumb" alt=""> #}
   <div class="overlay">
     <div class="item-title">{{ post.data.title }}</div>
     <div class="item-brand">{{ post.data.subtitle }}</div>

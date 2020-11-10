@@ -6,7 +6,7 @@ module.exports = async (src, alt, classes) => {
     // throw new Error(`Missing \`alt\` on myImage from: ${src}`);
     alt="";
   }
-  const fullSrc = site.baseUrl + '/' + src;
+  const fullSrc = 'https://raw.githubusercontent.com/monkstudio/unicorn-fluff/master/src/' + src;
   let stats = await Image(fullSrc, {
     widths: [320, 640, 960, 1200, 1800, 2400],
     formats: ["jpeg", "webp"],
