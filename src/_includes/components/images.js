@@ -1,12 +1,16 @@
 
 module.exports = async (src, alt, classes) => {
   const Image = require("@11ty/eleventy-img");
+  const path = require("path");
   const site = require('../../_data/site.js');
+
   if (!alt) {
     // throw new Error(`Missing \`alt\` on myImage from: ${src}`);
     alt="";
   }
-  const fullSrc = site.baseUrl + src;
+
+  const fullSrc = path.join(__dirname, '../../') + src;
+
   let stats = await Image(fullSrc, {
     widths: [320, 640, 960, 1200, 1800, 2400],
     formats: ["jpeg", "webp"],
