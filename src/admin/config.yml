@@ -22,8 +22,8 @@ collections:
           - {label: "Image", name: "url", widget: "image"}
           - {label: "Alt", name: "alt", widget: "string",required: false, hint: "Add an alt tag."}
           - {label: "Classes", name: "classes", widget: "string",required: false, hint: "Add addtional classes separated by a space"}
-          - {label: "Sizes", name: "classes", widget: "string",required: false, hint: "Add custom srcset sizes"}
-          - {label: "Lazy", name: "classes", widget: "boolean",required: false, hint: "Lazy or eager loading"}
+          - {label: "Sizes", name: "sizes", widget: "string",required: false, hint: "Add custom srcset sizes"}
+          - {label: "Lazy", name: "lazy", widget: "boolean",required: false, hint: "Lazy or eager loading"}
       - {label: "Body", name: "body", widget: "markdown", required: false}
       - {label: "Tags", name: tags, widget: list, default: ['post'], required: false}
       - {label: "Page Classes", name: "pageClasses", widget: "string", required: false, hint: "Add addtional page classes separated by a space"}
@@ -43,8 +43,8 @@ collections:
           - {label: "Image", name: "url", widget: "image"}
           - {label: "Alt", name: "alt", widget: "string",required: false, hint: "Add an alt tag."}
           - {label: "Classes", name: "classes", widget: "string",required: false, hint: "Add addtional classes separated by a space"}
-          - {label: "Sizes", name: "classes", widget: "string",required: false, hint: "Add custom srcset sizes"}
-          - {label: "Lazy", name: "classes", widget: "boolean",required: false, hint: "Lazy or eager loading"}
+          - {label: "Sizes", name: "sizes", widget: "string",required: false, hint: "Add custom srcset sizes"}
+          - {label: "Lazy", name: "lazy", widget: "boolean",required: false, hint: "Lazy or eager loading"}
       - {label: "Body", name: "body", widget: "markdown", required: false}
       - {label: "Tags", name: tags, widget: list, default: ['page'],required: false}
       - {label: "Page Classes", name: "pageClasses", widget: "string", required: false, hint: "Add addtional page classes separated by a space"}
