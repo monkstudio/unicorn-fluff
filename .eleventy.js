@@ -67,6 +67,8 @@ module.exports = (config) => {
   config.addPassthroughCopy('src/_headers');
   config.addPassthroughCopy('src/favicon.ico');
   config.addPassthroughCopy('src/assets/static');
+  config.addPassthroughCopy('src/admin');
+
 
   // Make eleventy aware of the manifest file
   config.addWatchTarget(manifestPath);
