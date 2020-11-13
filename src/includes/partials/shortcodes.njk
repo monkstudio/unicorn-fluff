@@ -1,0 +1,133 @@
+## Shortcodes
+All shortcodes can be used inside `.md` or `.njk` files.
+
+<details>
+  <summary>
+    <strong>Container and columns</strong>
+  </summary>
+  Use container and column shortcodes inside template files like below. Note the content has to be inline with the tags or 11ty may render it a code block. It's just a weird rendering bug. ```html
+  {% raw %}
+  ```html
+    {% container %}
+    {% column %}
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+    {% endcolumn %}
+
+    {% column %}
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    {% endcolumn %}
+    {% endcontainer %}
+  {% endraw %}
+  ```
+</details>
+
+<details>
+  <summary>
+    <strong>SVG icon</strong>
+  </summary>
+  Any SVG added to `src/assets/icons` is bundled into a symbol sprite file and made available through this shortcode.
+  {% raw %}
+  `{% icon "github" %}`
+  {% endraw %}
+  Will be rendered as:
+  ```html
+  <svg class="icon icon--github" role="img" aria-hidden="true">
+    <use xlink:href="/assets/images/sprite.svg#github"></use>
+  </svg>
+  ```
+</details>
+
+<details>
+  <summary>
+    <strong>Buttons</strong>
+  </summary>
+  Render buttons inside template files using the shortode below.
+  
+  ```html
+  {% raw %}
+    {% button 'this button was made using a shortcode', '/contact','_blank' %}`
+    {% button text, href,classes,target %}
+  {% endraw %}
+  ```
+
+  Will be rendered as:
+  {% button 'this button was made using a shortcode', '/contact','_blank' %}
+
+  ```html
+  {% raw %}
+    <a class="btn primary" href="/contact" target="_self">
+    this button was made using a shortcode
+    </a>
+  {% endraw %}
+  ```
+</details>
+
+<details>
+  <summary>
+    <strong>Images</strong>
+  </summary>
+  Responsive images are generated responsively using either front matter data or as a shortcode. Copy an image to `/src/assets/images/` and follow the code below.
+
+  {% raw %}
+  ```html
+  {% image imagetitle, alt, classes, sizes, lazy %}
+  ```
+  {% endraw %}
+
+  ### Shortcode:
+  {% raw %}
+  `{% image 'Pusheen_Zoom_Backgrounds_room_2020.jpg', 'Its Pusheen', 'feature' %}`
+  {% endraw %}
+
+  ### Front matter:
+  ```yaml
+  thumbnail:
+    url: pusheen_zoom_background_beach_2020.jpg
+    alt: a pic
+    classes: feature test asodhioas
+  ```
+</details>
+
+<details>
+  <summary>
+    <strong>Modals</strong>
+  </summary>
+  An easily customisable modal is included in this boilerplate and can be used as a paired shortcode as below. Note the indentation of the content with the template tags (again, a rendering issue)
+
+    
+  ```html
+  {% raw %}
+    {% modal content, modalname, buttontext %}
+    ...content
+    {% endmodal %}
+  {% endraw %}
+  ```
+  ```html
+  {% raw %}
+  {# start modal markup #}
+  {% modal 'popup', 'Open Modal' %}
+    {% container %}
+    {% column %}
+    this is content generated inside a modal shortcode!
+    {% endcolumn %}
+    {% column %}
+    this is content generated inside a modal shortcode!
+    {% endcolumn %}
+    {% endcontainer%}
+  {% endmodal %}
+  {% endraw %}
+  {# end modal markup #}
+  ```
+
+  {% modal 'popup',
+  'Open Modal' %}
+    {% container %}
+    {% column %}
+    ## test this is content generated inside a modal shortcode!
+    {% endcolumn %}
+    {% column %}
+    this is content generated inside a modal shortcode!
+    {% endcolumn %}
+    {% endcontainer%}
+  {% endmodal %}
+</details>

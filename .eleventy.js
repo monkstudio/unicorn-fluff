@@ -1,105 +1,36 @@
+const fs = require('fs');
+const path = require('path');
 const yaml = require('js-yaml');
-const htmlmin = require('html-minifier');
+
 //plugins
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-const Image = require("@11ty/eleventy-img");
-const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const markdownIt = require('markdown-it')
-const markdownItAnchor = require('markdown-it-anchor')
-const pluginTOC = require('eleventy-plugin-toc')
+const ErrorOverlayPlugin = require('eleventy-plugin-error-overlay');
+const TOCPlugin = require('eleventy-plugin-toc')
+const SyntaxHighlightPlugin = require("@11ty/eleventy-plugin-syntaxhighlight");
 
-
-//custom components
-const componentsDir = `./src/_includes/components`;
-const button = require(`${ componentsDir }/button.js`);
-const modal = require(`${ componentsDir }/modal.js`);
-const container = require(`${ componentsDir }/container.js`);
-const column = require(`${ componentsDir }/column.js`);
-const images = require(`${ componentsDir }/images.js`);
+const filters = require('./utils/filters');
+const markdown = require('./utils/markdown');
+const shortcodes = require('./utils/shortcodes');
+const transforms = require('./utils/transforms');
 
 module.exports = (config) => {
-
-  // Needed to prevent eleventy from ignoring changes to `webpack.njk`
-  // since it is in our `.gitignore`
-  config.setUseGitIgnore(false);
+  const manifestPath = path.resolve(__dirname, '_site/assets/manifest.json');
+  // Allow for customizing the built in markdown parser.
+  config.setLibrary('md', markdown);
 
   // Allow eleventy to understand yaml files
-  // mostly because we want comments support in data file.
   config.addDataExtension('yml', (contents) => yaml.safeLoad(contents));
 
-  // Pass-through files
-  config.addPassthroughCopy('src/robots.txt');
-  config.addPassthroughCopy('src/favicon.ico');
-  config.addPassthroughCopy('src/assets/images');
-  config.addPassthroughCopy('src/assets/scripts/vendor');
-  config.addPassthroughCopy('src/assets/static');
-  config.addPassthroughCopy('src/admin');
-
-  /*
-  -ˋˏ *.·:·.⟐.·:·.* ˎˊ-
-  ━━━ ⋅𖥔⋅ ━━✶━━ ⋅𖥔⋅ ━━━
-  Custom Filters
-  ━━━ ⋅𖥔⋅ ━━✶━━ ⋅𖥔⋅ ━━━
-  -ˋˏ *.·:·.⟐.·:·.* ˎˊ-
-  */
-  config.addFilter("dateDisplay", require("./src/filters/date.js"));
-
-  config.addFilter("filterTags", tags => {
-    tags = tags.filter(function (item) {
-      switch (item) {
-        // filter out any unwanted tags here
-        case "all":
-        case "nav":
-        case "post":
-        case "posts":
-        case "page":
-        case "pages":
-          return false;
-      }
-
-      return true;
-    });
-    return tags;
+  // Plugins
+  // Shows error name, message, and fancy stacktrace
+  config.addPlugin(ErrorOverlayPlugin);
+  config.addPlugin(TOCPlugin, {
+    tags: ['h1', 'h2', 'h3', 'h4'],
+    wrapper: 'nav',           // element to put around the root `ol`/`ul`
+    wrapperClass: 'toc',      // class for the element around the root `ol`/`ul`
+    ul: false,                // if to use `ul` instead of `ol`
+    flat: false,
   });
-
-
-  // compress and combine js files
-  config.addFilter("jsmin", function (code) {
-    const UglifyJS = require("uglify-js");
-    let minified = UglifyJS.minify(code);
-    if (minified.error) {
-      console.log("UglifyJS error: ", minified.error);
-      return code;
-    }
-    return minified.code;
-  });
-
-
-  /*
-  -ˋˏ *.·:·.⟐.·:·.* ˎˊ-
-  ━━━ ⋅𖥔⋅ ━━✶━━ ⋅𖥔⋅ ━━━
-  Custom shortcodes
-  ━━━ ⋅𖥔⋅ ━━✶━━ ⋅𖥔⋅ ━━━
-  -ˋˏ *.·:·.⟐.·:·.* ˎˊ-
-  */
-  config.addShortcode('button', button);
-  config.addPairedShortcode('modal', modal);
-  config.addPairedShortcode('container', container);
-  config.addPairedShortcode('column', column);
-  config.addNunjucksAsyncShortcode("image", images);
-
-  /*
-  -ˋˏ *.·:·.⟐.·:·.* ˎˊ-
-  ━━━ ⋅𖥔⋅ ━━✶━━ ⋅𖥔⋅ ━━━
-  Plugins
-  ━━━ ⋅𖥔⋅ ━━✶━━ ⋅𖥔⋅ ━━━
-  -ˋˏ *.·:·.⟐.·:·.* ˎˊ-
-  */
-  //add rss support
-  config.addPlugin(pluginRss);
-
-  //add syntax highlighting
-  config.addPlugin(pluginSyntaxHighlight, {
+  config.addPlugin(SyntaxHighlightPlugin, {
     templateFormats: ["*"],
     // Added in 3.0, set to true to always wrap lines in `<span class="highlight-line">`
     // The default (false) only wraps when line numbers are passed in.
@@ -113,6 +44,32 @@ module.exports = (config) => {
     lineSeparator: "\n",
   });
 
+  // Filters
+  config.addFilter('log', filters.log);
+  config.addFilter('formatDate', filters.formatDate);
+  config.addFilter("filterTags",filters.filterTags);
+  config.addFilter("jsmin",filters.jsmin);
+
+  // Shortcodes
+  config.addShortcode('icon', shortcodes.icon);
+  config.addPairedShortcode('markdown', shortcodes.markdown);
+  config.addNunjucksAsyncShortcode('image', shortcodes.image);
+  config.addNunjucksAsyncShortcode('webpack', shortcodes.webpack);
+  config.addShortcode('button', shortcodes.button);
+  config.addPairedShortcode('modal', shortcodes.modal);
+  config.addPairedShortcode('container', shortcodes.container);
+  config.addPairedShortcode('column', shortcodes.column);
+
+  // Transforms
+  config.addTransform('html-min', transforms.htmlmin);
+
+  // Pass-through files
+  config.addPassthroughCopy('src/_headers');
+  config.addPassthroughCopy('src/favicon.ico');
+  config.addPassthroughCopy('src/assets/static');
+
+  // Make eleventy aware of the manifest file
+  config.addWatchTarget(manifestPath);
 
   /*
   -ˋˏ *.·:·.⟐.·:·.* ˎˊ-
@@ -121,33 +78,6 @@ module.exports = (config) => {
   ━━━ ⋅𖥔⋅ ━━✶━━ ⋅𖥔⋅ ━━━
   -ˋˏ *.·:·.⟐.·:·.* ˎˊ-
   */
-  // Markdown
-  const mdOptions = {
-    html: true,
-    breaks: true,
-    linkify: true,
-    typographer: true
-  }
-  const mdAnchorOpts = {
-    permalink: true,
-    permalinkClass: 'anchor-link',
-    permalinkSymbol: '#',
-    // permalinkBefore: true,
-    level: [1, 2, 3, 4]
-  }
-  config.setLibrary(
-    'md',
-    markdownIt(mdOptions)
-      .use(markdownItAnchor, mdAnchorOpts)
-  )
-  config.addPlugin(pluginTOC, {
-    tags: ['h1', 'h2', 'h3', 'h4'],
-    wrapper: 'nav',           // element to put around the root `ol`/`ul`
-    wrapperClass: 'toc',      // class for the element around the root `ol`/`ul`
-    ul: false,                // if to use `ul` instead of `ol`
-    flat: false,
-  })
-
   //make tag list
   config.addCollection("tagList", function (collection) {
     let tagSet = new Set();
@@ -180,6 +110,24 @@ module.exports = (config) => {
     return [...tagSet];
   });
 
+  // BrowserSync Overrides
+  config.setBrowserSyncConfig({
+    ...config.browserSyncConfig,
+    // Show 404 page on invalid urls
+    callbacks: {
+      ready: (err, browserSync) => {
+        browserSync.addMiddleware('*', (req, res) => {
+          const fourOFour = fs.readFileSync('_site/404.html');
+          res.write(fourOFour);
+          res.end();
+        });
+      }
+    },
+    // Speed/clean up build time
+    ui: false,
+    ghostMode: false
+  });
+
   /*
   -ˋˏ *.·:·.⟐.·:·.* ˎˊ-
   ━━━ ⋅𖥔⋅ ━━✶━━ ⋅𖥔⋅ ━━━
@@ -189,26 +137,14 @@ module.exports = (config) => {
   */
   // Minify eleventy pages in production
   if (process.env.NODE_ENV === 'production') {
-    config.addTransform('html-min', (content, outputPath) =>
-      outputPath.endsWith('.html') ?
-      htmlmin.minify(content, {
-        collapseWhitespace: true,
-        removeComments: true,
-        removeRedundantAttributes: true,
-        removeScriptTypeAttributes: true,
-        removeStyleLinkTypeAttributes: true,
-        useShortDoctype: true
-      }) :
-      content
-    );
+    config.addTransform('html-min', transforms.htmlmin);
   }
 
   return {
-    dir: {
-      input: 'src',
-      output: 'dist'
-    },
-    htmlTemplateEngine: 'njk'
+    dir: { input: 'src', output: '_site', includes: 'includes', data: 'data' },
+    // Allow nunjucks, markdown and 11ty files to be processed
+    templateFormats: ['njk', 'md', '11ty.js'],
+    htmlTemplateEngine: 'njk',
+    markdownTemplateEngine: 'njk'
   };
-
 };

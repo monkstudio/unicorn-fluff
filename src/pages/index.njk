@@ -5,10 +5,16 @@ permalink: /
 date: Last Modified
 
 thumbnail:
-  url: /assets/images/Pusheen_Zoom_Backgrounds_room_2020.jpg
+  url: Pusheen_Zoom_Backgrounds_room_2020.jpg
   alt: a pic
-  classes: feature test asodhioas
+  classes: feature test asodhioas animate
+  sizes: '(max-width: 600px) 480px, 800px'
+  lazy: false
+
+htmlClass: html
+bodyClass: body
 ---
+
 {# Caveat: indenting does not work normally with shortcodes so keep all content on same indent line.  #}
 {% container %}
   {% column %}
@@ -21,22 +27,22 @@ thumbnail:
   {%- for page in collections.page |  sort(attribute='date') -%}
     <li>
       <a href="{{ page.url }}">{{ page.data.title }}</a> -
-      <time datetime="{{ page.date }}">{{ page.date | dateDisplay("LLLL d, y") }}</time>
+      <time datetime="{{ page.date }}">{{ page.date | formatDate("LLLL d, y") }}</time>
     </li>
   {%- endfor -%}
   </ul>
 
   ## Posts list
-  <ul class="listing animate">
+  <ul class="listing">
   {%- for page in collections.post |  sort(attribute='date') -%}
     <li>
       <a href="{{ page.url }}">{{ page.data.title }}</a> -
-      <time datetime="{{ page.date }}">{{ page.date | dateDisplay("LLLL d, y") }}</time>
+      <time datetime="{{ page.date }}">{{ page.date | formatDate("LLLL d, y") }}</time>
     </li>
   {%- endfor -%}
   </ul>
 
-  <a href="{{ url }}">Last updated</a> - <time datetime="{{ page.date }}">{{ page.date  | dateDisplay("LLLL d, y, HH:mm") }}</time>
+  <a href="{{ url }}">Last updated</a> - <time datetime="{{ page.date }}">{{ page.date  | formatDate("LLLL d, y, HH:mm") }}</time>
 
   {% endcolumn %}
 {% endcontainer %}

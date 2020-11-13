@@ -1,6 +1,5 @@
 # Build results
-dist/
-src/_includes/webpack.njk
+_site/
 
 # Visual Studio
 .vscode/
@@ -10,6 +9,7 @@ node_modules/
 .npm
 
 # Logs
+.cache/
 logs
 *.log
 npm-debug.log*
