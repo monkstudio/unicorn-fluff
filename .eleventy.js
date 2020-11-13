@@ -139,7 +139,6 @@ module.exports = (config) => {
   if (process.env.NODE_ENV === 'production') {
     config.addTransform('html-min', transforms.htmlmin);
   }
-
   return {
     dir: { input: 'src', output: '_site', includes: 'includes', data: 'data' },
     // Allow nunjucks, markdown and 11ty files to be processed

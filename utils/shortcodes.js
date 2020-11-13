@@ -70,7 +70,7 @@ module.exports = {
           (image) =>
             `<source type="image/${image[0].format}" srcset="${image
               .map((entry) => `${entry.url} ${entry.width}w`)
-              .join(', ')}" sizes="${sizes}" loading="${lazy ? 'lazy' : 'eager'}">`
+              .join(', ')}" sizes="${sizes}">`
         )
         .join('\n')}
       <img

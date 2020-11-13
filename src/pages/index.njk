@@ -7,9 +7,7 @@ date: Last Modified
 thumbnail:
   url: Pusheen_Zoom_Backgrounds_room_2020.jpg
   alt: a pic
-  classes: feature test asodhioas animate
-  sizes: '(max-width: 600px) 480px, 800px'
-  lazy: false
+  classes: feature test asodhioas
 
 htmlClass: html
 bodyClass: body
@@ -33,7 +31,7 @@ bodyClass: body
   </ul>
 
   ## Posts list
-  <ul class="listing">
+  <ul class="listing animate">
   {%- for page in collections.post |  sort(attribute='date') -%}
     <li>
       <a href="{{ page.url }}">{{ page.data.title }}</a> -
