@@ -101,7 +101,7 @@ ${ content }
 `;
 return markup;
 },
-button: (text, href, classes, target) => {
+button: (text, href, classes, target, rel) => {
 
 const primaryClass = classes ? 'primary' : '';
 const linkTarget = target ? target : 'self';
@@ -109,7 +109,7 @@ const linkTarget = target ? target : 'self';
 var buttonMarkup;
 if (href) {
 buttonMarkup = `
-<a class="btn ${ primaryClass }" href="${ href }" target="_${ linkTarget }">
+<a class="btn ${ primaryClass }" href="${ href }" target="${ linkTarget } rel="${ linkTarget }">
 ${ text }
 </a>
 `;
