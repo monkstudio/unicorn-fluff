@@ -12,6 +12,3 @@ tags:
 ---
 
 Hello.
-
-Goodbye.
-{% image "https://www.11ty.dev/img/possum-balloon-original.webp", "The possum is Eleventy’s mascot" %}

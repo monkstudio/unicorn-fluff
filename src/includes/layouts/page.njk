@@ -9,7 +9,7 @@ layout: default.njk
   {%- if thumbnail.url %}
     {% image thumbnail.url , thumbnail.alt, thumbnail.classes %}
   {% endif %}
-  
+
   <div class="container">
     {% if  page.url !== '/' %}
       {% include 'partials/page-title.njk' %}
